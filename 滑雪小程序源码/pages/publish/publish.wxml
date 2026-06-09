@@ -1,0 +1,13 @@
+<view class="page">
+  <view class="title">发布动态</view>
+  <view class="subtitle">分享滑雪体验、攻略和雪场打卡。后续会接入云数据库保存帖子。</view>
+
+  <view class="section card">
+    <view class="label">所在雪场</view>
+    <view class="select-box">{{selectedResort}}</view>
+    <view class="label">动态内容</view>
+    <textarea class="textarea" value="{{content}}" bindinput="onInput" placeholder="说说今天的雪况、路线或体验..." maxlength="300" />
+    <view class="upload-box">图片上传区域</view>
+    <button class="primary-btn submit" hover-class="tap-hover" bindtap="submitPost">发布动态</button>
+  </view>
+</view>

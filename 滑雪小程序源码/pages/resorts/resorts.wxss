@@ -1,0 +1,55 @@
+.resort-list-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.resort-cover {
+  position: relative;
+  height: 260rpx;
+  padding: 32rpx;
+  color: #ffffff;
+  font-size: 38rpx;
+  font-weight: 900;
+  background: #143a75;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.resort-image,
+.image-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-mask {
+  background: linear-gradient(180deg, rgba(6, 18, 36, 0.08) 0%, rgba(6, 18, 36, 0.68) 100%);
+}
+
+.resort-title-on-image {
+  position: absolute;
+  left: 32rpx;
+  bottom: 32rpx;
+  z-index: 1;
+}
+
+.resort-body {
+  padding: 26rpx;
+}
+
+.item-title {
+  font-size: 32rpx;
+  font-weight: 800;
+}
+
+.meta-row {
+  display: flex;
+  gap: 24rpx;
+  margin: 18rpx 0;
+  color: #6b768a;
+  font-size: 24rpx;
+}

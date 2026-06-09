@@ -1,0 +1,9 @@
+{
+  "name": "weatherService",
+  "version": "1.0.0",
+  "description": "SkiGo weather proxy cloud service",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

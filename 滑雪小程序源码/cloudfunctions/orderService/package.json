@@ -1,0 +1,9 @@
+{
+  "name": "orderService",
+  "version": "1.0.0",
+  "description": "SkiGo order cloud service",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

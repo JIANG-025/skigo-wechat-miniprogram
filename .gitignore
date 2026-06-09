@@ -1,0 +1,8 @@
+# WeChat DevTools personal settings
+滑雪小程序源码/project.private.config.json
+
+# Temporary files
+.DS_Store
+Thumbs.db
+*.log
+~$*.docx

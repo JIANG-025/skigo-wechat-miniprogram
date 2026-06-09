@@ -1,0 +1,32 @@
+<view class="page">
+  <view class="title-row">
+    <view>
+      <view class="title">滑雪社区</view>
+      <view class="subtitle">查看雪友动态，支持点赞、评论和删除演示。</view>
+    </view>
+    <view class="ghost-btn publish-btn" bindtap="goPublish">发布</view>
+  </view>
+
+  <view wx:if="{{posts.length === 0}}" class="section card empty-card">
+    暂无动态，点击发布分享滑雪体验。
+  </view>
+
+  <view class="section card post-card" wx:for="{{posts}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+    <view class="post-head">
+      <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+      <view>
+        <view class="item-title">{{item.author}}</view>
+        <view class="subtitle">{{item.createdAtText || '2小时前'}} · {{item.resort}}</view>
+      </view>
+    </view>
+    <view class="post-text">{{item.content}}</view>
+    <view class="post-images {{item.images.length === 1 ? 'single' : ''}}">
+      <image wx:for="{{item.images}}" wx:key="*this" class="post-image" src="{{item}}" mode="aspectFill" />
+    </view>
+    <view class="post-actions">
+      <view data-id="{{item.id}}" catchtap="likePost" hover-class="tap-hover" class="action-pill {{item.liked ? 'active' : ''}}">{{item.likes}} 赞</view>
+      <view>{{item.comments}} 评论</view>
+      <view data-id="{{item.id}}" catchtap="deletePost" hover-class="tap-hover" class="action-pill danger">删除</view>
+    </view>
+  </view>
+</view>

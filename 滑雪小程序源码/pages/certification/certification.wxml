@@ -1,0 +1,18 @@
+<view class="page">
+  <view class="title">等级认证</view>
+  <view class="subtitle">根据滑雪经验、训练记录和教练评价展示能力等级。</view>
+
+  <view class="section card level-card">
+    <view class="level">Lv.8</view>
+    <view>
+      <view class="item-title">雪场资深玩家</view>
+      <view class="subtitle">已完成中级道控速、连续换刃和基础刻滑训练。</view>
+    </view>
+  </view>
+
+  <view class="section soft-row" wx:for="{{items}}" wx:key="title">
+    <view class="item-title">{{item.title}}</view>
+    <view class="subtitle">{{item.desc}}</view>
+    <view class="tag">{{item.status}}</view>
+  </view>
+</view>

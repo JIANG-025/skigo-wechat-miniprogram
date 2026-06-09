@@ -1,0 +1,9 @@
+{
+  "name": "favoriteService",
+  "version": "1.0.0",
+  "description": "SkiGo favorite cloud service",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

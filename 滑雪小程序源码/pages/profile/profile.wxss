@@ -1,0 +1,92 @@
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 22rpx;
+}
+
+.avatar {
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  background: #165dff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 38rpx;
+}
+
+.profile-main {
+  flex: 1;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18rpx;
+}
+
+.action-card {
+  padding: 24rpx;
+}
+
+.action-value {
+  color: #165dff;
+  font-size: 42rpx;
+  font-weight: 900;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18rpx;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 24rpx 10rpx;
+}
+
+.stat-value {
+  color: #165dff;
+  font-size: 40rpx;
+  font-weight: 900;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16rpx;
+}
+
+.menu-item {
+  min-height: 96rpx;
+  border-radius: 18rpx;
+  background: #f0f7ff;
+  color: #165dff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.list-row {
+  margin-bottom: 18rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.item-title {
+  font-size: 28rpx;
+  font-weight: 800;
+}
+
+.empty-row {
+  color: #7a8496;
+  text-align: center;
+}

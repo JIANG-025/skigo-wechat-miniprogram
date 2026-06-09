@@ -1,0 +1,15 @@
+<view class="page" wx:if="{{coach}}">
+  <view class="card coach-head">
+    <image class="avatar" src="{{coach.avatar}}" mode="aspectFill" />
+    <view>
+      <view class="title">{{coach.name}}</view>
+      <view class="subtitle">{{coach.level}} · 擅长 {{coach.skill}}</view>
+    </view>
+  </view>
+  <view class="section card">
+    <view class="title">课程信息</view>
+    <view class="subtitle">适合零基础、进阶训练、刻滑和平花专项练习。</view>
+    <view class="price">¥{{coach.price}}/课时</view>
+    <button class="primary-btn" hover-class="tap-hover" bindtap="book">立即预约</button>
+  </view>
+</view>

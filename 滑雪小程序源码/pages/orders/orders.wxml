@@ -1,0 +1,18 @@
+<view class="page">
+  <view class="page-head">
+    <view>
+      <view class="title">我的订单</view>
+      <view class="subtitle">汇总雪票、酒店、装备和教练预约订单。</view>
+    </view>
+    <view class="count-pill">{{orders.length}} 单</view>
+  </view>
+  <view wx:if="{{orders.length === 0}}" class="section card empty-card">暂无订单。</view>
+  <view class="section card order-card" wx:for="{{orders}}" wx:key="id">
+    <view class="title-row">
+      <view class="item-title">{{item.title}}</view>
+      <view class="tag">{{item.status}}</view>
+    </view>
+    <view class="subtitle">{{item.type}} · {{item.createdAtText}}</view>
+    <view class="price">¥{{item.price}}</view>
+  </view>
+</view>

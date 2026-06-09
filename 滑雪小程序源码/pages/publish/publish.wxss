@@ -1,0 +1,39 @@
+.label {
+  margin: 22rpx 0 12rpx;
+  font-size: 26rpx;
+  font-weight: 800;
+}
+
+.select-box {
+  height: 76rpx;
+  line-height: 76rpx;
+  padding: 0 24rpx;
+  border-radius: 18rpx;
+  background: #f2f6fd;
+  color: #172033;
+}
+
+.textarea {
+  width: 100%;
+  height: 250rpx;
+  padding: 22rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  background: #f2f6fd;
+  font-size: 26rpx;
+}
+
+.upload-box {
+  margin-top: 22rpx;
+  height: 160rpx;
+  border-radius: 20rpx;
+  border: 2rpx dashed #b8c5d8;
+  color: #7a8496;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit {
+  margin-top: 28rpx;
+}

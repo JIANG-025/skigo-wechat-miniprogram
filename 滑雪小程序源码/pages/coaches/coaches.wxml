@@ -1,0 +1,12 @@
+<view class="page">
+  <view class="title">预约教练</view>
+  <view class="subtitle">查看教练资质、擅长方向和课时价格。</view>
+  <view class="section card coach-card" hover-class="tap-hover" wx:for="{{coaches}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+    <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+    <view class="coach-main">
+      <view class="item-title">{{item.name}} <text class="tag">{{item.level}}</text></view>
+      <view class="subtitle">擅长：{{item.skill}}</view>
+      <view class="price">¥{{item.price}}/课时</view>
+    </view>
+  </view>
+</view>

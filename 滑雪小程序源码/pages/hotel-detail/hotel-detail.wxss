@@ -1,0 +1,16 @@
+.detail-hero {
+  height: 320rpx;
+  border-radius: 28rpx;
+  padding: 36rpx;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 40rpx;
+  font-weight: 900;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(135deg, #1b4e78 0%, #61b8ff 100%);
+}
+
+.primary-btn {
+  margin-top: 28rpx;
+}

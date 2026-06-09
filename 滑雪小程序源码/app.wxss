@@ -1,0 +1,124 @@
+page {
+  min-height: 100vh;
+  background: #f6f8fb;
+  color: #172033;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 28rpx 28rpx 160rpx;
+  box-sizing: border-box;
+}
+
+.section {
+  margin-top: 28rpx;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 28rpx;
+  box-shadow: 0 10rpx 30rpx rgba(42, 61, 102, 0.08);
+  box-sizing: border-box;
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 800;
+}
+
+.subtitle {
+  margin-top: 8rpx;
+  color: #6b768a;
+  font-size: 24rpx;
+  line-height: 1.6;
+}
+
+.link {
+  color: #165dff;
+  font-size: 24rpx;
+}
+
+.primary-btn {
+  height: 72rpx;
+  line-height: 72rpx;
+  border-radius: 999rpx;
+  background: #165dff;
+  color: #ffffff;
+  font-size: 26rpx;
+  font-weight: 700;
+  text-align: center;
+  transition: transform 160ms ease, opacity 160ms ease, box-shadow 160ms ease;
+  box-shadow: 0 10rpx 22rpx rgba(22, 93, 255, 0.18);
+}
+
+.ghost-btn {
+  height: 64rpx;
+  line-height: 64rpx;
+  border-radius: 999rpx;
+  background: #edf4ff;
+  color: #165dff;
+  font-size: 24rpx;
+  font-weight: 700;
+  text-align: center;
+  transition: transform 160ms ease, opacity 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22rpx;
+}
+
+.muted {
+  color: #7a8496;
+}
+
+.price {
+  color: #165dff;
+  font-weight: 800;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6rpx 14rpx;
+  border-radius: 999rpx;
+  background: #eaf3ff;
+  color: #165dff;
+  font-size: 22rpx;
+  font-weight: 700;
+}
+
+.tap-hover {
+  transform: scale(0.97);
+  opacity: 0.86;
+  transition: all 120ms ease;
+}
+
+.soft-row {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 26rpx;
+  margin-bottom: 18rpx;
+  box-shadow: 0 8rpx 24rpx rgba(42, 61, 102, 0.06);
+  box-sizing: border-box;
+}
+
+.form-input {
+  height: 84rpx;
+  border-radius: 20rpx;
+  background: #eef3fb;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}

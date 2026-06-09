@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/resorts/resorts",
+    "pages/publish/publish",
+    "pages/store/store",
+    "pages/profile/profile",
+    "pages/search/search",
+    "pages/resort-detail/resort-detail",
+    "pages/ticket-booking/ticket-booking",
+    "pages/hotels/hotels",
+    "pages/hotel-detail/hotel-detail",
+    "pages/product-detail/product-detail",
+    "pages/rental/rental",
+    "pages/coaches/coaches",
+    "pages/coach-detail/coach-detail",
+    "pages/community/community",
+    "pages/post-detail/post-detail",
+    "pages/orders/orders",
+    "pages/favorites/favorites",
+    "pages/settings/settings",
+    "pages/profile-edit/profile-edit",
+    "pages/album/album",
+    "pages/diary/diary",
+    "pages/certification/certification",
+    "pages/support/support",
+    "pages/help/help",
+    "pages/insurance/insurance",
+    "pages/more/more"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "SkiGo",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f6f8fb"
+  },
+  "tabBar": {
+    "color": "#8a94a6",
+    "selectedColor": "#165DFF",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/resorts/resorts",
+        "text": "雪场"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "装备"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

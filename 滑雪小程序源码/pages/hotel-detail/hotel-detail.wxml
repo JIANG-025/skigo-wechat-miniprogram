@@ -1,0 +1,9 @@
+<view class="page">
+  <view class="detail-hero">云顶滑雪度假酒店</view>
+  <view class="section card">
+    <view class="title">云顶滑雪度假酒店</view>
+    <view class="subtitle">距离雪道步行 5 分钟，适合滑雪度假和家庭出行。</view>
+    <view class="price">¥688 起/晚</view>
+    <button class="primary-btn" hover-class="tap-hover" bindtap="submitOrder">立即预订</button>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "name": "postService",
+  "version": "1.0.0",
+  "description": "SkiGo community post cloud service",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

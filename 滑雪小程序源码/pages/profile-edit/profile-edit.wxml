@@ -1,0 +1,12 @@
+<view class="page">
+  <view class="title">编辑资料</view>
+  <view class="subtitle">修改后会同步显示在我的页面。</view>
+
+  <view class="section card">
+    <view class="label">账号昵称</view>
+    <input class="form-input" value="{{nickname}}" bindinput="onNicknameInput" placeholder="请输入昵称" maxlength="12" />
+    <view class="label space">滑雪等级</view>
+    <input class="form-input" value="{{level}}" bindinput="onLevelInput" placeholder="请输入等级说明" maxlength="18" />
+    <button class="primary-btn save-btn" hover-class="tap-hover" bindtap="save">保存资料</button>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+.info-line {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #edf1f7;
+}
+
+.primary-btn {
+  margin-top: 28rpx;
+}

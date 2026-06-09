@@ -1,0 +1,24 @@
+.level-card {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+}
+
+.level {
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 28rpx;
+  background: #165dff;
+  color: #ffffff;
+  font-size: 36rpx;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-title {
+  font-size: 30rpx;
+  font-weight: 800;
+  margin-bottom: 10rpx;
+}

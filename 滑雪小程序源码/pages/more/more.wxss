@@ -1,0 +1,14 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18rpx;
+}
+
+.item {
+  min-height: 190rpx;
+}
+
+.item-title {
+  font-size: 30rpx;
+  font-weight: 800;
+}

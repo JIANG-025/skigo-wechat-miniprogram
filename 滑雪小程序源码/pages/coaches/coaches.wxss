@@ -1,0 +1,27 @@
+.coach-card {
+  display: flex;
+  gap: 22rpx;
+  margin-bottom: 20rpx;
+}
+
+.avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  background: #165dff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  font-weight: 900;
+}
+
+.coach-main {
+  flex: 1;
+}
+
+.item-title {
+  font-size: 28rpx;
+  font-weight: 800;
+}

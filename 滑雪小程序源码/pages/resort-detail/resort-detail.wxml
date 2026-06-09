@@ -1,0 +1,51 @@
+<view class="page" wx:if="{{resort}}">
+  <view class="detail-hero">
+    <image class="detail-image" src="{{resort.image}}" mode="aspectFill" />
+    <view class="detail-mask"></view>
+    <view class="hero-content">
+      <view class="tag">{{resort.status}}</view>
+      <view class="detail-title">{{resort.name}}</view>
+      <view class="hero-subtitle">{{resort.location}} · {{resort.feature}}</view>
+    </view>
+  </view>
+
+  <view class="section card">
+    <view class="title-row">
+      <view class="title">雪场信息</view>
+      <view class="price">¥{{resort.price}} 起</view>
+    </view>
+    <view class="intro">这里提供雪道开放、天气雪况、票价和教练服务信息，适合滑雪出行前快速了解。</view>
+    <view class="info-row"><text>天气</text><text>{{resort.weather}}</text></view>
+    <view class="info-row"><text>雪况</text><text>{{resort.snow}}</text></view>
+    <view class="info-row"><text>适合人群</text><text>初级到中高级雪友</text></view>
+    <view class="info-row"><text>服务设施</text><text>雪具大厅、储物柜、餐饮、酒店</text></view>
+    <button class="ghost-btn favorite-btn {{favorited ? 'active' : ''}}" hover-class="tap-hover" bindtap="toggleFavorite">{{favorited ? '取消收藏' : '收藏雪场'}}</button>
+    <button class="primary-btn" hover-class="tap-hover" bindtap="bookTicket">立即预订</button>
+  </view>
+
+  <view class="section">
+    <view class="title-row">
+      <view class="title">平台教练</view>
+    </view>
+    <view class="coach-row card" hover-class="tap-hover" wx:for="{{platformCoaches}}" wx:key="id" data-id="{{item.id}}" bindtap="goCoach">
+      <image class="coach-avatar" src="{{item.avatar}}" mode="aspectFill" />
+      <view>
+        <view class="coach-name">{{item.name}} <text class="tag">{{item.level}}</text></view>
+        <view class="subtitle">平台认证 · {{item.skill}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="title-row">
+      <view class="title">雪场教练</view>
+    </view>
+    <view class="coach-row card" hover-class="tap-hover" wx:for="{{resortCoaches}}" wx:key="id" data-id="{{item.id}}" bindtap="goCoach">
+      <image class="coach-avatar" src="{{item.avatar}}" mode="aspectFill" />
+      <view>
+        <view class="coach-name">{{item.name}} <text class="tag">{{item.level}}</text></view>
+        <view class="subtitle">驻场服务 · {{item.skill}}</view>
+      </view>
+    </view>
+  </view>
+</view>

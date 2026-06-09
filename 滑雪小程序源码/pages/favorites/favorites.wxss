@@ -1,0 +1,33 @@
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20rpx;
+}
+
+.count-pill {
+  flex: 0 0 auto;
+  padding: 10rpx 18rpx;
+  border-radius: 999rpx;
+  background: #edf4ff;
+  color: #165dff;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.favorite-card {
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-title {
+  font-size: 28rpx;
+  font-weight: 800;
+}
+
+.empty-card {
+  color: #7a8496;
+  text-align: center;
+}

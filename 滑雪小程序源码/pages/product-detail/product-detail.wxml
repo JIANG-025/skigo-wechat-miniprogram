@@ -1,0 +1,13 @@
+<view class="page" wx:if="{{product}}">
+  <view class="product-hero">
+    <image class="product-image" src="{{product.image}}" mode="aspectFill" />
+    <view class="product-tag">{{product.tag}}</view>
+  </view>
+  <view class="section card">
+    <view class="title">{{product.name}}</view>
+    <view class="subtitle">适合滑雪训练、度假出行和装备升级。</view>
+    <view class="price">¥{{product.price}}</view>
+    <button class="ghost-btn favorite-btn {{favorited ? 'active' : ''}}" hover-class="tap-hover" bindtap="toggleFavorite">{{favorited ? '取消收藏' : '收藏装备'}}</button>
+    <button class="primary-btn" hover-class="tap-hover" bindtap="buy">购买装备</button>
+  </view>
+</view>

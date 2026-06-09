@@ -1,0 +1,8 @@
+.item-title {
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.action {
+  margin-top: 24rpx;
+}

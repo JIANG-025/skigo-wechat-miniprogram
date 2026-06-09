@@ -1,0 +1,24 @@
+<view class="page">
+  <view class="title">雪场</view>
+  <view class="subtitle">查看热门雪场、开放状态、天气雪况和预订价格。</view>
+
+  <view class="section card resort-list-card" hover-class="tap-hover" wx:for="{{resorts}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+    <view class="resort-cover">
+      <image class="resort-image" src="{{item.image}}" mode="aspectFill" />
+      <view class="image-mask"></view>
+      <view class="resort-title-on-image">{{item.name}}</view>
+    </view>
+    <view class="resort-body">
+      <view class="title-row">
+        <view class="item-title">{{item.name}}</view>
+        <view class="tag">{{item.status}}</view>
+      </view>
+      <view class="subtitle">{{item.location}} · {{item.feature}}</view>
+      <view class="meta-row">
+        <view>{{item.weather}}</view>
+        <view>{{item.snow}}</view>
+      </view>
+      <view class="price">¥{{item.price}} 起</view>
+    </view>
+  </view>
+</view>

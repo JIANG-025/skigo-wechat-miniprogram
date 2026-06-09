@@ -1,0 +1,15 @@
+<view class="page">
+  <view class="title">雪票预订</view>
+  <view class="subtitle">选择票种、日期和人数，后续接入订单数据库。</view>
+  <view class="section card">
+    <view class="label">票种</view>
+    <view class="type-row">
+      <view wx:for="{{ticketTypes}}" wx:key="*this" hover-class="tap-hover" data-type="{{item}}" bindtap="chooseType" class="type-item {{activeType === item ? 'active' : ''}}">{{item}}</view>
+    </view>
+    <view class="label">预订信息</view>
+    <view class="info-line">雪场：崇礼云顶</view>
+    <view class="info-line">日期：演示日期</view>
+    <view class="info-line">数量：1 人</view>
+    <button class="primary-btn" hover-class="tap-hover" bindtap="submitOrder">提交订单</button>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+.setting-row {
+  margin-bottom: 18rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-title {
+  font-size: 28rpx;
+  font-weight: 800;
+}
+
+.reset-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22rpx;
+}
+
+.reset-btn {
+  width: 120rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  border-radius: 999rpx;
+  background: #165dff;
+  color: #ffffff;
+  font-size: 24rpx;
+  font-weight: 800;
+  padding: 0;
+}

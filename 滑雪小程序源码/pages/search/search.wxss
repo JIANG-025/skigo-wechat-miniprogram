@@ -1,0 +1,31 @@
+.search-input {
+  margin-top: 24rpx;
+  height: 82rpx;
+  border-radius: 999rpx;
+  background: #eef3fb;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18rpx;
+}
+
+.tag-item {
+  padding: 14rpx 22rpx;
+  border-radius: 999rpx;
+  background: #edf4ff;
+  color: #165dff;
+  font-weight: 700;
+}
+
+.ai-card {
+  border: 2rpx solid #dce9ff;
+}
+
+.item-title {
+  font-size: 30rpx;
+  font-weight: 800;
+}

@@ -1,0 +1,324 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24rpx;
+}
+
+.brand {
+  color: #165dff;
+  font-size: 38rpx;
+  font-weight: 900;
+}
+
+.search {
+  flex: 1;
+  max-width: 420rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  border-radius: 999rpx;
+  background: #eef3fb;
+  color: #8290a5;
+  padding: 0 26rpx;
+  font-size: 24rpx;
+}
+
+.hero {
+  margin-top: 28rpx;
+  height: 370rpx;
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 18rpx 44rpx rgba(20, 45, 82, 0.16);
+}
+
+.hero-card {
+  position: relative;
+  height: 100%;
+  padding: 38rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: #165dff;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.hero-image,
+.hero-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-mask {
+  background: linear-gradient(180deg, rgba(12, 25, 48, 0.08) 0%, rgba(12, 25, 48, 0.68) 100%);
+}
+
+.hero-title {
+  position: relative;
+  margin-top: 18rpx;
+  color: #ffffff;
+  font-size: 40rpx;
+  line-height: 1.22;
+  font-weight: 900;
+  max-width: 610rpx;
+  text-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.28);
+}
+
+.hero-card .tag {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.weather-tabs {
+  display: flex;
+  background: #eef4ff;
+  border-radius: 999rpx;
+  padding: 6rpx;
+}
+
+.weather-tab {
+  padding: 10rpx 20rpx;
+  border-radius: 999rpx;
+  color: #6b768a;
+  font-size: 22rpx;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.weather-tab.active {
+  color: #ffffff;
+  background: #165dff;
+}
+
+.weather-main {
+  font-size: 30rpx;
+  font-weight: 800;
+  transition: opacity 160ms ease;
+}
+
+.weather-resorts {
+  margin: 8rpx 0 18rpx;
+  white-space: nowrap;
+}
+
+.weather-resort {
+  display: inline-flex;
+  align-items: center;
+  height: 54rpx;
+  padding: 0 22rpx;
+  margin-right: 14rpx;
+  border-radius: 999rpx;
+  background: #f0f6ff;
+  color: #627089;
+  font-size: 23rpx;
+  font-weight: 700;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.weather-resort.active {
+  background: #165dff;
+  color: #ffffff;
+  box-shadow: 0 8rpx 18rpx rgba(22, 93, 255, 0.22);
+}
+
+.weather-meta {
+  margin-top: 18rpx;
+  padding-top: 16rpx;
+  border-top: 1rpx solid #edf1f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #7a8496;
+  font-size: 22rpx;
+}
+
+.nav-item {
+  min-height: 104rpx;
+  border-radius: 22rpx;
+  background: #f0f7ff;
+  color: #165dff;
+  font-size: 24rpx;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10rpx;
+  box-sizing: border-box;
+  transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.resort-swiper {
+  height: 440rpx;
+}
+
+.resort-card {
+  width: 94%;
+  margin-right: 24rpx;
+  margin-bottom: 4rpx;
+  border-radius: 28rpx;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 10rpx 30rpx rgba(42, 61, 102, 0.08);
+  color: inherit;
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.resort-cover {
+  position: relative;
+  height: 250rpx;
+  padding: 28rpx;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 34rpx;
+  font-weight: 900;
+  background: #10284d;
+  overflow: hidden;
+}
+
+.resort-image,
+.image-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-mask {
+  background: linear-gradient(180deg, rgba(7, 19, 38, 0.05) 0%, rgba(7, 19, 38, 0.75) 100%);
+}
+
+.resort-cover-title {
+  position: absolute;
+  left: 28rpx;
+  bottom: 28rpx;
+  z-index: 1;
+}
+
+.resort-info {
+  padding: 24rpx;
+}
+
+.resort-name,
+.product-name,
+.coach-name,
+.post-author {
+  font-size: 28rpx;
+  font-weight: 800;
+}
+
+.card-bottom {
+  margin-top: 18rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22rpx;
+}
+
+.product-cover {
+  position: relative;
+  height: 210rpx;
+  border-radius: 20rpx;
+  background: #edf6ff;
+  margin-bottom: 18rpx;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+}
+
+.product-tag {
+  position: absolute;
+  top: 14rpx;
+  right: 14rpx;
+  padding: 6rpx 14rpx;
+  border-radius: 999rpx;
+  background: #165dff;
+  color: #ffffff;
+  font-size: 22rpx;
+  font-weight: 800;
+}
+
+.coach-card {
+  display: flex;
+  gap: 22rpx;
+  margin-bottom: 20rpx;
+}
+
+.avatar {
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 50%;
+}
+
+.avatar.small {
+  width: 72rpx;
+  height: 72rpx;
+}
+
+.coach-body {
+  flex: 1;
+}
+
+.post-card {
+  margin-bottom: 22rpx;
+}
+
+.post-head {
+  display: flex;
+  gap: 18rpx;
+  align-items: center;
+}
+
+.post-text {
+  margin-top: 20rpx;
+  font-size: 27rpx;
+  line-height: 1.7;
+}
+
+.post-images {
+  margin-top: 18rpx;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12rpx;
+}
+
+.post-images.single {
+  grid-template-columns: 1fr;
+}
+
+.post-image {
+  width: 100%;
+  height: 150rpx;
+  border-radius: 14rpx;
+  background: #edf4ff;
+}
+
+.post-images.single .post-image {
+  height: 260rpx;
+}
+
+.post-actions {
+  margin-top: 22rpx;
+  padding-top: 18rpx;
+  border-top: 1rpx solid #edf1f7;
+  display: flex;
+  gap: 44rpx;
+  color: #7a8496;
+  font-size: 24rpx;
+}

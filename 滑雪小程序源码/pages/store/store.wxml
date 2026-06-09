@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="title-row">
+    <view>
+      <view class="title">装备商城</view>
+      <view class="subtitle">购买或租赁滑雪装备。</view>
+    </view>
+    <view class="ghost-btn rental-btn" hover-class="tap-hover" bindtap="goRental">去租赁</view>
+  </view>
+
+  <view class="section product-grid">
+    <view class="card product-card" hover-class="tap-hover" wx:for="{{products}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+      <view class="product-cover">
+        <image class="product-image" src="{{item.image}}" mode="aspectFill" />
+        <view class="product-tag">{{item.tag}}</view>
+      </view>
+      <view class="product-name">{{item.name}}</view>
+      <view class="price">¥{{item.price}}</view>
+    </view>
+  </view>
+</view>

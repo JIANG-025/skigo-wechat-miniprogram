@@ -1,0 +1,144 @@
+<view class="page home-page">
+  <view class="topbar">
+    <view>
+      <view class="brand">SkiGo.</view>
+      <view class="subtitle">滑雪一站式服务平台</view>
+    </view>
+    <view class="search" hover-class="tap-hover" bindtap="goSearch">搜索雪场、酒店、装备</view>
+  </view>
+
+  <swiper class="hero" indicator-dots circular autoplay interval="3500">
+    <swiper-item wx:for="{{banners}}" wx:key="title" data-url="{{item.url}}" bindtap="goBanner">
+      <view class="hero-card" hover-class="tap-hover" data-url="{{item.url}}" catchtap="goBanner">
+        <image class="hero-image" src="{{item.image}}" mode="aspectFill" />
+        <view class="hero-mask"></view>
+        <view class="tag">{{item.desc}}</view>
+        <view class="hero-title">{{item.title}}</view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <view class="section card">
+    <view class="title-row">
+      <view class="title">今日动态</view>
+      <view class="weather-tabs">
+        <view wx:for="{{weatherTabs}}" wx:key="*this" data-index="{{index}}" bindtap="switchWeather" hover-class="tap-hover" class="weather-tab {{activeWeatherTab === index ? 'active' : ''}}">{{item}}</view>
+      </view>
+    </view>
+
+    <scroll-view scroll-x class="weather-resorts">
+      <view wx:for="{{resorts}}" wx:key="id" data-index="{{index}}" bindtap="chooseWeatherResort" hover-class="tap-hover" class="weather-resort {{activeWeatherResortIndex === index ? 'active' : ''}}">
+        {{item.name}}
+      </view>
+    </scroll-view>
+
+    <view wx:if="{{activeWeatherTab === 0}}" class="weather-box">
+      <view class="weather-main">{{selectedWeatherResort.name}} · {{selectedWeather.weatherText}}</view>
+      <view class="subtitle">{{selectedWeather.location}}，风速 {{selectedWeather.windSpeedText}} km/h。</view>
+    </view>
+    <view wx:else class="weather-box">
+      <view class="weather-main">{{selectedWeatherResort.name}} · {{selectedWeather.snowText}}</view>
+      <view class="subtitle">今日降雪 {{selectedWeather.snowfall || 0}} cm，建议提前查看雪道开放和雪票库存。</view>
+    </view>
+    <view class="weather-meta">
+      <text>{{weatherLoading ? '天气更新中...' : selectedWeather.metaText}}</text>
+      <text class="link" hover-class="tap-hover" bindtap="refreshWeather">刷新</text>
+    </view>
+  </view>
+
+  <view class="section card">
+    <view class="grid-4">
+      <view class="nav-item" hover-class="tap-hover" data-url="/pages/ticket-booking/ticket-booking" bindtap="goPage">雪场订票</view>
+      <view class="nav-item" hover-class="tap-hover" data-url="/pages/hotels/hotels" bindtap="goPage">酒店预定</view>
+      <view class="nav-item" hover-class="tap-hover" data-url="/pages/rental/rental" bindtap="goPage">装备租赁</view>
+      <view class="nav-item" hover-class="tap-hover" data-url="/pages/store/store" bindtap="goPage">装备购买</view>
+      <view class="nav-item" hover-class="tap-hover" data-url="/pages/coaches/coaches" bindtap="goPage">预约教练</view>
+      <view class="nav-item" hover-class="tap-hover" data-url="/pages/community/community" bindtap="goPage">滑雪社区</view>
+      <view class="nav-item" hover-class="tap-hover" data-url="/pages/insurance/insurance" bindtap="goPage">购买保险</view>
+      <view class="nav-item" hover-class="tap-hover" data-url="/pages/more/more" bindtap="goPage">更多功能</view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="title-row">
+      <view class="title">热门雪场</view>
+      <view class="link" data-url="/pages/resorts/resorts" bindtap="goPage">查看全部</view>
+    </view>
+    <swiper class="resort-swiper" display-multiple-items="1" next-margin="88rpx" previous-margin="0rpx">
+      <swiper-item wx:for="{{resorts}}" wx:key="id">
+        <view class="resort-card" hover-class="tap-hover" data-id="{{item.id}}" bindtap="goResortDetail">
+          <view class="resort-cover">
+            <image class="resort-image" src="{{item.image}}" mode="aspectFill" />
+            <view class="image-mask"></view>
+            <view class="resort-cover-title">{{item.name}}</view>
+          </view>
+          <view class="resort-info">
+            <view class="resort-name">{{item.name}}</view>
+            <view class="subtitle">{{item.feature}}</view>
+            <view class="card-bottom">
+              <view class="price">¥{{item.price}} 起</view>
+              <view class="tag">{{item.status}}</view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="section">
+    <view class="title-row">
+      <view class="title">热门装备</view>
+      <view class="link" data-url="/pages/store/store" bindtap="goPage">进入商城</view>
+    </view>
+    <view class="product-grid">
+      <view class="product-card card" hover-class="tap-hover" wx:for="{{products}}" wx:key="id" data-id="{{item.id}}" bindtap="goProductDetail">
+        <view class="product-cover">
+          <image class="product-image" src="{{item.image}}" mode="aspectFill" />
+          <view class="product-tag">{{item.tag}}</view>
+        </view>
+        <view class="product-name">{{item.name}}</view>
+        <view class="price">¥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="title-row">
+      <view class="title">金牌教练</view>
+      <view class="link" data-url="/pages/coaches/coaches" bindtap="goPage">查看全部</view>
+    </view>
+    <view class="coach-card card" hover-class="tap-hover" wx:for="{{coaches}}" wx:key="id" data-id="{{item.id}}" bindtap="goCoachDetail">
+      <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+      <view class="coach-body">
+        <view class="coach-name">{{item.name}} <text class="tag">{{item.level}}</text></view>
+        <view class="subtitle">擅长：{{item.skill}}</view>
+        <view class="price">¥{{item.price}}/课时</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="title-row">
+      <view class="title">社区动态</view>
+      <view class="link" data-url="/pages/community/community" bindtap="goPage">查看更多</view>
+    </view>
+    <view class="post-card card" wx:for="{{posts}}" wx:key="id">
+      <view class="post-head">
+        <image class="avatar small" src="{{item.avatar}}" mode="aspectFill" />
+        <view>
+          <view class="post-author">{{item.author}}</view>
+          <view class="subtitle">2小时前 · {{item.resort}}</view>
+        </view>
+      </view>
+      <view class="post-text">{{item.content}}</view>
+      <view class="post-images {{item.images.length === 1 ? 'single' : ''}}">
+        <image wx:for="{{item.images}}" wx:key="*this" class="post-image" src="{{item}}" mode="aspectFill" />
+      </view>
+      <view class="post-actions">
+        <text>{{item.likes}} 赞</text>
+        <text>{{item.comments}} 评论</text>
+        <text>分享</text>
+      </view>
+    </view>
+  </view>
+</view>

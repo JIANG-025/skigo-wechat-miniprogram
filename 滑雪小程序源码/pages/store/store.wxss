@@ -1,0 +1,45 @@
+.rental-btn {
+  width: 150rpx;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22rpx;
+}
+
+.product-card {
+  min-height: 360rpx;
+}
+
+.product-cover {
+  position: relative;
+  height: 210rpx;
+  border-radius: 20rpx;
+  background: #edf6ff;
+  margin-bottom: 18rpx;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+}
+
+.product-tag {
+  position: absolute;
+  top: 14rpx;
+  right: 14rpx;
+  padding: 6rpx 14rpx;
+  border-radius: 999rpx;
+  background: #165dff;
+  color: #ffffff;
+  font-size: 22rpx;
+  font-weight: 800;
+}
+
+.product-name {
+  min-height: 72rpx;
+  font-size: 28rpx;
+  font-weight: 800;
+}

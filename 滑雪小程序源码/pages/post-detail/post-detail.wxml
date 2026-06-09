@@ -1,0 +1,36 @@
+<view class="page" wx:if="{{post}}">
+  <view class="card post-card">
+    <view class="post-head">
+      <image class="avatar" src="{{post.avatar}}" mode="aspectFill" />
+      <view>
+        <view class="item-title">{{post.author}}</view>
+        <view class="subtitle">{{post.createdAtText || '2小时前'}} · {{post.resort}}</view>
+      </view>
+    </view>
+    <view class="post-text">{{post.content}}</view>
+    <view class="post-images {{post.images.length === 1 ? 'single' : ''}}">
+      <image wx:for="{{post.images}}" wx:key="*this" class="post-image" src="{{item}}" mode="aspectFill" />
+    </view>
+    <view class="post-actions">
+      <view bindtap="likePost" hover-class="tap-hover" class="action-pill {{post.liked ? 'active' : ''}}">{{post.likes}} 赞</view>
+      <view>{{post.comments}} 评论</view>
+      <view bindtap="toggleFavorite" hover-class="tap-hover" class="action-pill {{favorited ? 'active' : ''}}">{{favorited ? '已收藏' : '收藏'}}</view>
+    </view>
+  </view>
+
+  <view class="section card">
+    <view class="title-row">
+      <view class="title">评论</view>
+    </view>
+    <view wx:if="{{!post.commentsList || post.commentsList.length === 0}}" class="empty">暂无评论，来说两句。</view>
+    <view wx:for="{{post.commentsList}}" wx:key="id" class="comment-item">
+      <view class="comment-author">{{item.author}}</view>
+      <view class="comment-content">{{item.content}}</view>
+    </view>
+  </view>
+
+  <view class="comment-bar">
+    <input class="comment-input" value="{{commentContent}}" bindinput="onCommentInput" placeholder="写评论..." />
+    <button class="comment-btn" hover-class="tap-hover" bindtap="submitComment">发送</button>
+  </view>
+</view>

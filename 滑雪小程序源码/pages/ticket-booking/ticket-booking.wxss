@@ -1,0 +1,30 @@
+.label {
+  margin: 18rpx 0;
+  font-weight: 800;
+}
+
+.type-row {
+  display: flex;
+  gap: 18rpx;
+}
+
+.type-item {
+  padding: 16rpx 24rpx;
+  border-radius: 999rpx;
+  background: #edf4ff;
+  color: #165dff;
+}
+
+.type-item.active {
+  background: #165dff;
+  color: #ffffff;
+}
+
+.info-line {
+  padding: 18rpx 0;
+  border-bottom: 1rpx solid #edf1f7;
+}
+
+.primary-btn {
+  margin-top: 28rpx;
+}

@@ -1,0 +1,11 @@
+<view class="page">
+  <view class="title">装备租赁</view>
+  <view class="subtitle">选择装备类型、租赁日期和归还时间。</view>
+  <view class="section card">
+    <view class="info-line">装备：双板套装</view>
+    <view class="info-line">日期：演示日期</view>
+    <view class="info-line">押金：¥500</view>
+    <view class="info-line">租金：¥120/天</view>
+    <button class="primary-btn" hover-class="tap-hover" bindtap="submitOrder">提交租赁订单</button>
+  </view>
+</view>
