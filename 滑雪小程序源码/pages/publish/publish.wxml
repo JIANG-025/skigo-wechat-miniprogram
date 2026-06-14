@@ -18,7 +18,9 @@
     <view class="select-box">{{selectedResort}}</view>
     <view class="label">动态内容</view>
     <textarea class="textarea" value="{{content}}" bindinput="onInput" placeholder="说说今天的雪况、路线或体验..." maxlength="300" />
-    <view class="upload-box">添加图片</view>
+    <view class="upload-box">
+      <image class="upload-image" src="/images/publish-upload.png" mode="aspectFill" />
+    </view>
     <button class="primary-btn submit" hover-class="tap-hover" bindtap="submitPost">发布动态</button>
   </view>
 </view>

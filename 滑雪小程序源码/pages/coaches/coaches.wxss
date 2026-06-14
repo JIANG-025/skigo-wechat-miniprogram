@@ -47,11 +47,6 @@
   font-weight: 900;
 }
 
-.text-avatar {
-  background: #165dff;
-  color: #ffffff;
-}
-
 .coach-main {
   flex: 1;
 }

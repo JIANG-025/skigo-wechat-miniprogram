@@ -46,8 +46,7 @@
       <view class="title">平台教练</view>
     </view>
     <view class="coach-row card" hover-class="tap-hover" wx:for="{{platformCoaches}}" wx:key="id" data-id="{{item.id}}" bindtap="goCoach">
-      <image wx:if="{{item.avatar}}" class="coach-avatar" src="{{item.avatar}}" mode="aspectFill" />
-      <view wx:else class="coach-avatar text-avatar">{{item.initial}}</view>
+      <image class="coach-avatar" src="{{item.avatar}}" mode="aspectFill" />
       <view>
         <view class="coach-name">{{item.name}} <text class="tag">{{item.level}}</text></view>
         <view class="subtitle">平台认证 · {{item.skill}}</view>
@@ -61,8 +60,7 @@
       <view class="link">{{resortCoaches.length}} 位</view>
     </view>
     <view class="coach-row card" hover-class="tap-hover" wx:for="{{resortCoaches}}" wx:key="id" data-id="{{item.id}}" bindtap="goCoach">
-      <image wx:if="{{item.avatar}}" class="coach-avatar" src="{{item.avatar}}" mode="aspectFill" />
-      <view wx:else class="coach-avatar text-avatar">{{item.initial}}</view>
+      <image class="coach-avatar" src="{{item.avatar}}" mode="aspectFill" />
       <view class="coach-main">
         <view class="coach-name">{{item.name}} <text class="tag">{{item.level}}</text></view>
         <view class="subtitle">{{item.category}} · {{item.skill}}</view>

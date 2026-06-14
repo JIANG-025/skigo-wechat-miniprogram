@@ -29,7 +29,7 @@
 
   <view class="section card menu-grid">
     <view class="menu-item" hover-class="tap-hover" wx:for="{{menus}}" wx:key="label" data-url="{{item.url}}" bindtap="goPage">
-      <view class="menu-icon">{{item.icon}}</view>
+      <image class="menu-icon" src="{{item.icon}}" mode="aspectFill" />
       <view>{{item.label}}</view>
     </view>
   </view>

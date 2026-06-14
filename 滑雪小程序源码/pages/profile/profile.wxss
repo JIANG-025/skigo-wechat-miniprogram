@@ -88,16 +88,10 @@
 }
 
 .menu-icon {
-  width: 44rpx;
-  height: 44rpx;
-  border-radius: 14rpx;
-  background: #165dff;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22rpx;
-  font-weight: 900;
+  width: 52rpx;
+  height: 52rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 8rpx 18rpx rgba(22, 93, 255, 0.12);
 }
 
 .list-row {

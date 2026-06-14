@@ -20,11 +20,6 @@
   font-weight: 900;
 }
 
-.text-avatar {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-}
-
 .coach-head .subtitle {
   color: rgba(255, 255, 255, 0.84);
 }

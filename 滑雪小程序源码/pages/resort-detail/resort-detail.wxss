@@ -153,16 +153,6 @@
   border-radius: 50%;
 }
 
-.text-avatar {
-  background: #165dff;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 34rpx;
-  font-weight: 900;
-}
-
 .coach-name {
   font-size: 28rpx;
   font-weight: 800;

@@ -1,7 +1,6 @@
 <view class="page" wx:if="{{coach}}">
   <view class="card coach-head">
-    <image wx:if="{{coach.avatar}}" class="avatar" src="{{coach.avatar}}" mode="aspectFill" />
-    <view wx:else class="avatar text-avatar">{{coach.initial}}</view>
+    <image class="avatar" src="{{coach.avatar}}" mode="aspectFill" />
     <view>
       <view class="tag">{{coach.category}}</view>
       <view class="title">{{coach.name}}</view>

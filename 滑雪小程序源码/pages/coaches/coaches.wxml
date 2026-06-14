@@ -8,8 +8,7 @@
   <view class="list-summary">共 {{filteredCoaches.length}} 位{{activeCategory === '全部' ? '认证教练' : activeCategory}}</view>
 
   <view class="section card coach-card" hover-class="tap-hover" wx:for="{{filteredCoaches}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
-    <image wx:if="{{item.avatar}}" class="avatar" src="{{item.avatar}}" mode="aspectFill" />
-    <view wx:else class="avatar text-avatar">{{item.initial}}</view>
+    <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
     <view class="coach-main">
       <view class="item-title">{{item.name}} <text class="tag">{{item.level}}</text></view>
       <view class="subtitle">{{item.resort}} · {{item.category}}</view>

@@ -15,17 +15,17 @@ Page({
       { label: '累计雪时', value: 896 }
     ],
     menus: [
-      { icon: '约', label: '我的预约', url: '/pages/reservations/reservations' },
-      { icon: '单', label: '我的订单', url: '/pages/orders/orders' },
-      { icon: '藏', label: '我的收藏', url: '/pages/favorites/favorites' },
-      { icon: '评', label: '我的评论', url: '/pages/my-comments/my-comments' },
-      { icon: '入', label: '教练入驻', url: '/pages/coach-join/coach-join' },
-      { icon: '册', label: '滑雪相册', url: '/pages/album/album' },
-      { icon: '记', label: '滑雪日记', url: '/pages/diary/diary' },
-      { icon: '级', label: '等级认证', url: '/pages/certification/certification' },
-      { icon: '服', label: '客服中心', url: '/pages/support/support' },
-      { icon: '助', label: '帮助中心', url: '/pages/help/help' },
-      { icon: '设', label: '设置', url: '/pages/settings/settings' }
+      { icon: '/images/icon-reservation.png', label: '我的预约', url: '/pages/reservations/reservations' },
+      { icon: '/images/icon-order.png', label: '我的订单', url: '/pages/orders/orders' },
+      { icon: '/images/icon-favorite.png', label: '我的收藏', url: '/pages/favorites/favorites' },
+      { icon: '/images/icon-comment.png', label: '我的评论', url: '/pages/my-comments/my-comments' },
+      { icon: '/images/icon-join.png', label: '教练入驻', url: '/pages/coach-join/coach-join' },
+      { icon: '/images/icon-album.png', label: '滑雪相册', url: '/pages/album/album' },
+      { icon: '/images/icon-diary.png', label: '滑雪日记', url: '/pages/diary/diary' },
+      { icon: '/images/icon-cert.png', label: '等级认证', url: '/pages/certification/certification' },
+      { icon: '/images/icon-service.png', label: '客服中心', url: '/pages/support/support' },
+      { icon: '/images/icon-help.png', label: '帮助中心', url: '/pages/help/help' },
+      { icon: '/images/icon-settings.png', label: '设置', url: '/pages/settings/settings' }
     ]
   },
   onShow() {
