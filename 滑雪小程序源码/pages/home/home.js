@@ -1,6 +1,12 @@
 const { resorts, products, coaches, posts } = require('../../utils/mock-data')
 const weatherStore = require('../../utils/weather-store')
 
+function setTabBarSelected(page, selected) {
+  if (typeof page.getTabBar === 'function' && page.getTabBar()) {
+    page.getTabBar().setData({ selected, menuVisible: false })
+  }
+}
+
 Page({
   data: {
     banners: [
@@ -32,6 +38,9 @@ Page({
   },
   onLoad() {
     this.loadWeather(resorts[0])
+  },
+  onShow() {
+    setTabBarSelected(this, 0)
   },
   switchWeather(event) {
     this.setData({

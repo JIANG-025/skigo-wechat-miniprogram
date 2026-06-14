@@ -11,7 +11,7 @@
   </view>
 
   <view class="section hint-card" wx:if="{{!showPublishForm}}">
-    <image class="hint-image" src="/images/publish-upload.png" mode="aspectFill" />
+    <image class="hint-image" src="/images/publish-snow-report.jpg" mode="aspectFill" />
     <view class="hint-copy">
       <view class="hint-title">今天的雪况值得记录</view>
       <view class="subtitle">点击“发布动态”，把路线、装备体验或雪场状态同步到社区。</view>

@@ -44,7 +44,7 @@
 }
 
 .hint-image {
-  width: 132rpx;
+  width: 166rpx;
   height: 132rpx;
   flex: none;
   border-radius: 24rpx;

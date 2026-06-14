@@ -1,0 +1,23 @@
+<view class="quick-mask {{menuVisible ? 'show' : ''}}" catchtap="closeMenu"></view>
+
+<view class="quick-sheet {{menuVisible ? 'show' : ''}}">
+  <view class="sheet-handle"></view>
+  <view class="sheet-title">快捷操作</view>
+  <view class="sheet-grid">
+    <view class="sheet-item" wx:for="{{quickActions}}" wx:key="title" data-index="{{index}}" bindtap="tapQuickAction" hover-class="tap-hover">
+      <image class="sheet-icon" src="{{item.icon}}" mode="aspectFill" />
+      <view class="sheet-copy">
+        <view class="sheet-item-title">{{item.title}}</view>
+        <view class="sheet-item-desc">{{item.desc}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="tab-shell">
+  <view class="tab-item {{selected === index ? 'active' : ''}} {{item.center ? 'center' : ''}}" wx:for="{{list}}" wx:key="pagePath" data-index="{{index}}" bindtap="switchTab">
+    <view wx:if="{{item.center}}" class="plus-button">+</view>
+    <view wx:else class="tab-icon">{{item.icon}}</view>
+    <view class="tab-label">{{item.text}}</view>
+  </view>
+</view>

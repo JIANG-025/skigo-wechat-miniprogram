@@ -1,5 +1,11 @@
 const postStore = require('../../utils/post-store')
 
+function setTabBarSelected(page, selected) {
+  if (typeof page.getTabBar === 'function' && page.getTabBar()) {
+    page.getTabBar().setData({ selected, menuVisible: false })
+  }
+}
+
 Page({
   data: {
     content: '',
@@ -11,6 +17,14 @@ Page({
       { icon: '/images/icon-join.png', title: '教练入驻', desc: '填写资料申请入驻', url: '/pages/coach-join/coach-join' },
       { icon: '/images/icon-diary.png', title: '发布动态', desc: '分享雪况、路线和体验', action: 'publish' }
     ]
+  },
+  onShow() {
+    const shouldOpenPublish = wx.getStorageSync('skigo_open_publish_form')
+    setTabBarSelected(this, 2)
+    if (shouldOpenPublish) {
+      wx.removeStorageSync('skigo_open_publish_form')
+      this.setData({ showPublishForm: true })
+    }
   },
   goAction(event) {
     const { url, tab, action } = event.currentTarget.dataset

@@ -2,6 +2,12 @@ const orderStore = require('../../utils/order-store')
 const favoriteStore = require('../../utils/favorite-store')
 const userStore = require('../../utils/user-store')
 
+function setTabBarSelected(page, selected) {
+  if (typeof page.getTabBar === 'function' && page.getTabBar()) {
+    page.getTabBar().setData({ selected, menuVisible: false })
+  }
+}
+
 Page({
   data: {
     profile: userStore.getProfile(),
@@ -29,6 +35,7 @@ Page({
     ]
   },
   onShow() {
+    setTabBarSelected(this, 4)
     this.loadProfileData()
   },
   async loadProfileData() {

@@ -1,11 +1,18 @@
 const postStore = require('../../utils/post-store')
 
+function setTabBarSelected(page, selected) {
+  if (typeof page.getTabBar === 'function' && page.getTabBar()) {
+    page.getTabBar().setData({ selected, menuVisible: false })
+  }
+}
+
 Page({
   data: {
     posts: [],
     loading: false
   },
   onShow() {
+    setTabBarSelected(this, 3)
     this.loadPosts()
   },
   async loadPosts() {
@@ -35,6 +42,7 @@ Page({
     })
   },
   goPublish() {
+    wx.setStorageSync('skigo_open_publish_form', true)
     wx.switchTab({ url: '/pages/publish/publish' })
   }
 })
