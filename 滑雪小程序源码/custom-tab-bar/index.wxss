@@ -35,17 +35,23 @@
   color: #165dff;
 }
 
-.tab-icon {
-  width: 46rpx;
-  height: 46rpx;
-  line-height: 46rpx;
+.tab-icon-wrap {
+  width: 48rpx;
+  height: 48rpx;
   border-radius: 18rpx;
-  text-align: center;
-  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
 }
 
-.tab-item.active .tab-icon {
+.tab-icon {
+  width: 42rpx;
+  height: 42rpx;
+  display: block;
+}
+
+.tab-item.active .tab-icon-wrap {
   background: #eaf2ff;
 }
 

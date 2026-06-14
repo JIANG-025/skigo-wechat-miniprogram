@@ -3,11 +3,11 @@ Component({
     selected: 0,
     menuVisible: false,
     list: [
-      { pagePath: '/pages/home/home', text: '首页', icon: '⌂' },
-      { pagePath: '/pages/resorts/resorts', text: '雪场', icon: '雪' },
+      { pagePath: '/pages/home/home', text: '首页', icon: '/images/tab-home.png', activeIcon: '/images/tab-home-active.png' },
+      { pagePath: '/pages/resorts/resorts', text: '雪场', icon: '/images/tab-resort.png', activeIcon: '/images/tab-resort-active.png' },
       { pagePath: '/pages/publish/publish', text: '发布', center: true },
-      { pagePath: '/pages/community/community', text: '社区', icon: '◎' },
-      { pagePath: '/pages/profile/profile', text: '我的', icon: '人' }
+      { pagePath: '/pages/community/community', text: '社区', icon: '/images/tab-community.png', activeIcon: '/images/tab-community-active.png' },
+      { pagePath: '/pages/profile/profile', text: '我的', icon: '/images/tab-profile.png', activeIcon: '/images/tab-profile-active.png' }
     ],
     quickActions: [
       { icon: '/images/icon-coach.png', title: '预约教练', desc: '选择教练与课程', url: '/pages/coaches/coaches' },

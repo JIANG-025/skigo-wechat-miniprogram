@@ -1,5 +1,6 @@
 const CLOUD_FUNCTION = 'weatherService'
 const CLOUD_TIMEOUT = 2500
+const ENABLE_CLOUD_WEATHER = false
 
 function withTimeout(promise, timeout = CLOUD_TIMEOUT) {
   return Promise.race([
@@ -37,6 +38,9 @@ function normalizeWeather(weather) {
 }
 
 async function fetchWeather(resort) {
+  if (!ENABLE_CLOUD_WEATHER) {
+    return normalizeWeather(formatLocalWeather(resort))
+  }
   const response = await withTimeout(
     wx.cloud.callFunction({
       name: CLOUD_FUNCTION,
