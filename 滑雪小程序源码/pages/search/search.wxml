@@ -3,12 +3,12 @@
   <view class="subtitle">输入雪场、酒店、装备或教练，系统会给出智能推荐。</view>
   <input class="search-input" value="{{keyword}}" bindinput="onInput" placeholder="搜索雪场、酒店、装备、教练" />
 
-  <view class="section card ai-card">
+  <view class="section card recommend-card">
     <view class="title-row">
-      <view class="title">AI 推荐</view>
+      <view class="title">智能推荐</view>
       <view class="tag">智能匹配</view>
     </view>
-    <view class="subtitle">{{aiTip}}</view>
+    <view class="subtitle">{{recommendTip}}</view>
   </view>
 
   <view class="section card">

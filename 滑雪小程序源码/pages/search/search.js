@@ -10,7 +10,7 @@ Page({
   data: {
     keyword: '',
     hotWords: ['崇礼云顶', '长白山万达', '滑雪板', '教练预约'],
-    aiTip: '可以搜索“新手”“滑雪板”“崇礼”等关键词，系统会推荐合适的服务。',
+    recommendTip: '可以搜索“新手”“滑雪板”“崇礼”等关键词，系统会推荐合适的服务。',
     results: allResults
   },
   onInput(event) {
@@ -27,10 +27,10 @@ Page({
     this.setData({
       keyword: text,
       results,
-      aiTip: this.getAiTip(text, results)
+      recommendTip: this.getRecommendTip(text, results)
     })
   },
-  getAiTip(keyword, results) {
+  getRecommendTip(keyword, results) {
     if (!keyword) return '可以搜索“新手”“滑雪板”“崇礼”等关键词，系统会推荐合适的服务。'
     if (keyword.includes('新手')) return '新手建议优先选择教练课程、平缓雪道和单日保险。'
     if (keyword.includes('装备') || keyword.includes('滑雪板')) return '根据搜索内容，推荐先查看装备商城和装备租赁服务。'

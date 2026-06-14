@@ -21,7 +21,7 @@
   font-weight: 700;
 }
 
-.ai-card {
+.recommend-card {
   border: 2rpx solid #dce9ff;
 }
 
