@@ -1,20 +1,28 @@
 <view class="page">
   <view class="title">快捷操作</view>
-  <view class="subtitle">快速进入预约、入驻和社区发布功能。</view>
+  <view class="subtitle">从这里快速完成预约、查看记录、申请入驻或发布动态。</view>
 
   <view class="section action-grid">
-    <view class="card action-card" wx:for="{{quickActions}}" wx:key="title" data-url="{{item.url}}" data-tab="{{item.tab}}" hover-class="tap-hover" bindtap="goAction">
+    <view class="card action-card {{showPublishForm && item.action === 'publish' ? 'active' : ''}}" wx:for="{{quickActions}}" wx:key="title" data-url="{{item.url}}" data-tab="{{item.tab}}" data-action="{{item.action}}" hover-class="tap-hover" bindtap="goAction">
       <image class="action-icon" src="{{item.icon}}" mode="aspectFill" />
       <view class="action-title">{{item.title}}</view>
       <view class="subtitle">{{item.desc}}</view>
     </view>
   </view>
 
-  <view class="section title-row">
+  <view class="section hint-card" wx:if="{{!showPublishForm}}">
+    <image class="hint-image" src="/images/publish-upload.png" mode="aspectFill" />
+    <view class="hint-copy">
+      <view class="hint-title">今天的雪况值得记录</view>
+      <view class="subtitle">点击“发布动态”，把路线、装备体验或雪场状态同步到社区。</view>
+    </view>
+  </view>
+
+  <view class="section title-row" wx:if="{{showPublishForm}}">
     <view class="title">发布动态</view>
   </view>
 
-  <view class="section card publish-card">
+  <view class="section card publish-card" wx:if="{{showPublishForm}}">
     <view class="label">所在雪场</view>
     <view class="select-box">{{selectedResort}}</view>
     <view class="label">动态内容</view>

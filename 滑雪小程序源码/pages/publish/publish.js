@@ -4,15 +4,20 @@ Page({
   data: {
     content: '',
     selectedResort: '崇礼云顶',
+    showPublishForm: false,
     quickActions: [
       { icon: '/images/icon-coach.png', title: '预约教练', desc: '选择教练和上课时间', url: '/pages/coaches/coaches' },
       { icon: '/images/icon-reservation.png', title: '我的预约', desc: '查看教练预约状态', url: '/pages/reservations/reservations' },
       { icon: '/images/icon-join.png', title: '教练入驻', desc: '填写资料申请入驻', url: '/pages/coach-join/coach-join' },
-      { icon: '/images/icon-community.png', title: '滑雪社区', desc: '浏览雪友动态和评论', url: '/pages/community/community', tab: true }
+      { icon: '/images/icon-diary.png', title: '发布动态', desc: '分享雪况、路线和体验', action: 'publish' }
     ]
   },
   goAction(event) {
-    const { url, tab } = event.currentTarget.dataset
+    const { url, tab, action } = event.currentTarget.dataset
+    if (action === 'publish') {
+      this.setData({ showPublishForm: true })
+      return
+    }
     if (tab) {
       wx.switchTab({ url })
       return
@@ -32,7 +37,7 @@ Page({
       content: this.data.content.trim()
     })
     wx.showToast({ title: '发布成功', icon: 'success' })
-    this.setData({ content: '' })
+    this.setData({ content: '', showPublishForm: false })
     setTimeout(() => {
       wx.switchTab({ url: '/pages/community/community' })
     }, 500)
