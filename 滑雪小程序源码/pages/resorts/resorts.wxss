@@ -125,7 +125,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 18rpx;
   color: #7a8496;
   font-size: 23rpx;
+  line-height: 1.5;
+}
+
+.open-time {
+  flex: 1;
+  min-width: 260rpx;
+}
+
+.open-difficulty {
+  flex: none;
+  color: #51617a;
+  font-weight: 700;
 }

@@ -32,8 +32,8 @@
         <view class="meta-chip">{{item.snow}}</view>
       </view>
       <view class="open-row">
-        <text>开放时间 {{item.openTime}}</text>
-        <text>{{item.difficulty}}</text>
+        <text class="open-time">开放时间 {{item.openTime}}</text>
+        <text class="open-difficulty">{{item.difficulty}}</text>
       </view>
     </view>
   </view>
