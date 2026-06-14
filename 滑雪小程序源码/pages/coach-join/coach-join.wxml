@@ -1,0 +1,36 @@
+<view class="page">
+  <view class="title">教练入驻</view>
+  <view class="subtitle">填写授课资料后，可用于展示教练服务信息。</view>
+
+  <view class="section card form-card">
+    <view class="field-label">姓名</view>
+    <input class="form-input" data-field="name" value="{{form.name}}" bindinput="onInput" placeholder="请输入姓名" />
+
+    <view class="field-label">联系电话</view>
+    <input class="form-input" data-field="phone" value="{{form.phone}}" bindinput="onInput" placeholder="请输入联系电话" />
+
+    <view class="field-label">教练等级</view>
+    <picker range="{{levels}}" bindchange="chooseLevel">
+      <view class="picker-box">{{form.level || '请选择教练等级'}}</view>
+    </picker>
+
+    <view class="field-label">教学经验（年）</view>
+    <input class="form-input" type="number" data-field="years" value="{{form.years}}" bindinput="onInput" placeholder="请输入教学年限" />
+
+    <view class="field-label">授课雪场</view>
+    <picker range="{{resorts}}" bindchange="chooseResort">
+      <view class="picker-box">{{form.resort}}</view>
+    </picker>
+
+    <view class="field-label">擅长领域</view>
+    <input class="form-input" data-field="skill" value="{{form.skill}}" bindinput="onInput" placeholder="如：双板、初级教学、儿童教学" />
+
+    <view class="field-label">资质证书</view>
+    <input class="form-input" data-field="certificate" value="{{form.certificate}}" bindinput="onInput" placeholder="如：国家一级滑雪指导员" />
+
+    <view class="field-label">个人简介</view>
+    <textarea class="textarea" data-field="intro" value="{{form.intro}}" bindinput="onInput" placeholder="介绍你的教学经验和风格" maxlength="240" />
+
+    <button class="primary-btn submit" hover-class="tap-hover" bindtap="submit">提交资料</button>
+  </view>
+</view>

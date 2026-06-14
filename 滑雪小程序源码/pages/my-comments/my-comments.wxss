@@ -1,0 +1,24 @@
+.empty-card {
+  text-align: center;
+}
+
+.empty-title,
+.item-title {
+  font-size: 28rpx;
+  font-weight: 900;
+}
+
+.action {
+  margin-top: 24rpx;
+}
+
+.comment-card {
+  margin-bottom: 18rpx;
+}
+
+.content {
+  margin-top: 14rpx;
+  font-size: 27rpx;
+  line-height: 1.7;
+  color: #38445a;
+}

@@ -8,7 +8,7 @@ Page({
   },
   resetDemoData() {
     wx.showModal({
-      title: '重置演示数据',
+      title: '重置默认数据',
       content: '将恢复默认帖子、订单和收藏数据，是否继续？',
       success: async (res) => {
         if (!res.confirm) return

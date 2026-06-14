@@ -2,7 +2,7 @@
   <view class="title-row">
     <view>
       <view class="title">滑雪社区</view>
-      <view class="subtitle">查看雪友动态，支持点赞、评论和删除演示。</view>
+      <view class="subtitle">查看雪友动态，支持点赞、评论和内容管理。</view>
     </view>
     <view class="ghost-btn publish-btn" bindtap="goPublish">发布</view>
   </view>

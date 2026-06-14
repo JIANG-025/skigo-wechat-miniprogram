@@ -89,7 +89,7 @@ Page({
       '/pages/home/home',
       '/pages/resorts/resorts',
       '/pages/publish/publish',
-      '/pages/store/store',
+      '/pages/community/community',
       '/pages/profile/profile'
     ]
     if (tabPages.includes(url)) {

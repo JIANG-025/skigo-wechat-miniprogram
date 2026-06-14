@@ -18,6 +18,9 @@
     "pages/post-detail/post-detail",
     "pages/orders/orders",
     "pages/favorites/favorites",
+    "pages/reservations/reservations",
+    "pages/my-comments/my-comments",
+    "pages/coach-join/coach-join",
     "pages/settings/settings",
     "pages/profile-edit/profile-edit",
     "pages/album/album",
@@ -51,11 +54,11 @@
       },
       {
         "pagePath": "pages/publish/publish",
-        "text": "发布"
+        "text": "＋"
       },
       {
-        "pagePath": "pages/store/store",
-        "text": "装备"
+        "pagePath": "pages/community/community",
+        "text": "社区"
       },
       {
         "pagePath": "pages/profile/profile",

@@ -1,0 +1,19 @@
+<view class="page">
+  <view class="title">我的评论</view>
+  <view class="subtitle">集中查看你在雪场、教练和社区内容下的互动记录。</view>
+
+  <view wx:if="{{comments.length === 0}}" class="section card empty-card">
+    <view class="empty-title">暂无评论记录</view>
+    <view class="subtitle">后续在雪场、教练或社区内容下评论后，会汇总显示在这里。</view>
+    <button class="primary-btn action" hover-class="tap-hover" bindtap="goExplore">去社区看看</button>
+  </view>
+
+  <view class="section card comment-card" wx:for="{{comments}}" wx:key="id">
+    <view class="title-row">
+      <view class="item-title">{{item.targetTitle}}</view>
+      <view class="tag">{{item.type}}</view>
+    </view>
+    <view class="content">{{item.content}}</view>
+    <view class="subtitle">{{item.createdAtText}}</view>
+  </view>
+</view>

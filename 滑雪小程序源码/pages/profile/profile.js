@@ -15,8 +15,11 @@ Page({
       { label: '累计雪时', value: 896 }
     ],
     menus: [
+      { label: '我的预约', url: '/pages/reservations/reservations' },
       { label: '我的订单', url: '/pages/orders/orders' },
       { label: '我的收藏', url: '/pages/favorites/favorites' },
+      { label: '我的评论', url: '/pages/my-comments/my-comments' },
+      { label: '教练入驻', url: '/pages/coach-join/coach-join' },
       { label: '滑雪相册', url: '/pages/album/album' },
       { label: '滑雪日记', url: '/pages/diary/diary' },
       { label: '等级认证', url: '/pages/certification/certification' },
@@ -45,6 +48,11 @@ Page({
     wx.navigateTo({ url: '/pages/profile-edit/profile-edit' })
   },
   goPage(event) {
-    wx.navigateTo({ url: event.currentTarget.dataset.url })
+    const url = event.currentTarget.dataset.url
+    if (url === '/pages/community/community') {
+      wx.switchTab({ url })
+      return
+    }
+    wx.navigateTo({ url })
   }
 })

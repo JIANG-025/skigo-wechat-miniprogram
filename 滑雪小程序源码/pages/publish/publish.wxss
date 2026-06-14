@@ -1,3 +1,19 @@
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18rpx;
+}
+
+.action-card {
+  min-height: 170rpx;
+}
+
+.action-title {
+  font-size: 30rpx;
+  font-weight: 900;
+  color: #172033;
+}
+
 .label {
   margin: 22rpx 0 12rpx;
   font-size: 26rpx;

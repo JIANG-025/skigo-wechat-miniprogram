@@ -1,0 +1,45 @@
+.tab-row {
+  display: flex;
+  gap: 14rpx;
+}
+
+.tab-item {
+  padding: 14rpx 24rpx;
+  border-radius: 999rpx;
+  background: #edf4ff;
+  color: #627089;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.tab-item.active {
+  background: #165dff;
+  color: #ffffff;
+  box-shadow: 0 8rpx 18rpx rgba(22, 93, 255, 0.18);
+}
+
+.empty-card {
+  text-align: center;
+}
+
+.empty-title,
+.item-title {
+  font-size: 28rpx;
+  font-weight: 900;
+}
+
+.action {
+  margin-top: 24rpx;
+}
+
+.reservation-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24rpx;
+  margin-bottom: 18rpx;
+}
+
+.right {
+  text-align: right;
+}

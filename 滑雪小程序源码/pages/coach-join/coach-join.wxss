@@ -1,0 +1,35 @@
+.form-card {
+  padding-bottom: 34rpx;
+}
+
+.field-label {
+  margin: 22rpx 0 12rpx;
+  font-size: 25rpx;
+  font-weight: 900;
+  color: #172033;
+}
+
+.picker-box {
+  height: 84rpx;
+  line-height: 84rpx;
+  border-radius: 20rpx;
+  background: #eef3fb;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  color: #38445a;
+  font-size: 28rpx;
+}
+
+.textarea {
+  width: 100%;
+  height: 180rpx;
+  border-radius: 20rpx;
+  background: #eef3fb;
+  padding: 22rpx 24rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+
+.submit {
+  margin-top: 30rpx;
+}
