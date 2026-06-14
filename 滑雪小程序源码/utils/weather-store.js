@@ -1,4 +1,14 @@
 const CLOUD_FUNCTION = 'weatherService'
+const CLOUD_TIMEOUT = 2500
+
+function withTimeout(promise, timeout = CLOUD_TIMEOUT) {
+  return Promise.race([
+    promise,
+    new Promise((resolve, reject) => {
+      setTimeout(() => reject(new Error('weatherService request timeout')), timeout)
+    })
+  ])
+}
 
 function formatLocalWeather(resort) {
   return {
@@ -28,23 +38,25 @@ function normalizeWeather(weather) {
 
 async function fetchWeather(resort) {
   try {
-    const response = await wx.cloud.callFunction({
-      name: CLOUD_FUNCTION,
-      data: {
-        action: 'current',
-        resort: {
-          id: resort.id,
-          name: resort.name,
-          location: resort.location,
-          latitude: resort.latitude,
-          longitude: resort.longitude
+    const response = await withTimeout(
+      wx.cloud.callFunction({
+        name: CLOUD_FUNCTION,
+        data: {
+          action: 'current',
+          resort: {
+            id: resort.id,
+            name: resort.name,
+            location: resort.location,
+            latitude: resort.latitude,
+            longitude: resort.longitude
+          }
         }
-      }
-    })
+      })
+    )
     const result = response.result || {}
     if (result.weather) return normalizeWeather(result.weather)
   } catch (error) {
-    console.warn('[weatherService] fallback to local weather', error)
+    console.warn('[weatherService] fallback to local weather', error && error.message ? error.message : error)
   }
   return normalizeWeather(formatLocalWeather(resort))
 }
