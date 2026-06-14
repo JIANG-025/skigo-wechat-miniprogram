@@ -48,4 +48,24 @@
       </view>
     </view>
   </view>
+
+  <view class="section card">
+    <view class="title-row">
+      <view class="title">雪场评论</view>
+      <view class="tag">{{comments.length}} 条</view>
+    </view>
+    <view wx:if="{{comments.length === 0}}" class="empty">暂无评论，欢迎分享雪场体验。</view>
+    <view class="comment-item" wx:for="{{comments}}" wx:key="id">
+      <view>
+        <view class="comment-author">{{item.author}}</view>
+        <view class="comment-content">{{item.content}}</view>
+        <view class="subtitle">{{item.createdAtText}}</view>
+      </view>
+      <view class="link" data-id="{{item.id}}" bindtap="deleteComment">删除</view>
+    </view>
+    <view class="comment-box">
+      <input class="comment-input" value="{{commentContent}}" bindinput="onCommentInput" placeholder="写下你的评价" />
+      <button class="comment-btn" hover-class="tap-hover" bindtap="submitComment">发送</button>
+    </view>
+  </view>
 </view>

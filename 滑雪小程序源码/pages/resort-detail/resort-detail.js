@@ -1,21 +1,31 @@
-const { resorts, coaches } = require('../../utils/mock-data')
+const { resorts } = require('../../utils/mock-data')
 const favoriteStore = require('../../utils/favorite-store')
+const commentStore = require('../../utils/comment-store')
+const coachStore = require('../../utils/coach-store')
 
 Page({
   data: {
     resort: null,
     favorited: false,
     platformCoaches: [],
-    resortCoaches: []
+    resortCoaches: [],
+    comments: [],
+    commentContent: ''
   },
   onLoad(options) {
     const resort = resorts.find(item => item.id === options.id) || resorts[0]
+    const allCoaches = coachStore.getCoaches()
+    const resortCoaches = allCoaches.filter(coach => (
+      String(coach.resort || '').includes(resort.name) ||
+      resort.name.includes(String(coach.resort || ''))
+    ))
     this.setData({
       resort,
-      platformCoaches: coaches.slice(0, 2),
-      resortCoaches: coaches.slice(1, 3)
+      platformCoaches: allCoaches.slice(0, 2),
+      resortCoaches: resortCoaches.slice(0, 3)
     })
     this.refreshFavorite(resort.id)
+    this.loadComments(resort.id)
   },
   async refreshFavorite(id) {
     const favorited = await favoriteStore.isFavorited(id)
@@ -26,6 +36,33 @@ Page({
   },
   goCoach(event) {
     wx.navigateTo({ url: `/pages/coach-detail/coach-detail?id=${event.currentTarget.dataset.id}` })
+  },
+  onCommentInput(event) {
+    this.setData({ commentContent: event.detail.value })
+  },
+  loadComments(id) {
+    this.setData({ comments: commentStore.getTargetComments(id) })
+  },
+  submitComment() {
+    const content = this.data.commentContent.trim()
+    if (!content) {
+      wx.showToast({ title: '请输入评论内容', icon: 'none' })
+      return
+    }
+    const resort = this.data.resort
+    commentStore.addComment({
+      targetId: resort.id,
+      targetTitle: resort.name,
+      type: '雪场',
+      content
+    })
+    this.setData({ commentContent: '' })
+    this.loadComments(resort.id)
+    wx.showToast({ title: '评论成功', icon: 'success' })
+  },
+  deleteComment(event) {
+    commentStore.deleteComment(event.currentTarget.dataset.id)
+    this.loadComments(this.data.resort.id)
   },
   async toggleFavorite() {
     const resort = this.data.resort

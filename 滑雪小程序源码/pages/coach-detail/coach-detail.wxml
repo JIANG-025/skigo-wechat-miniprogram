@@ -1,15 +1,45 @@
 <view class="page" wx:if="{{coach}}">
   <view class="card coach-head">
-    <image class="avatar" src="{{coach.avatar}}" mode="aspectFill" />
+    <image wx:if="{{coach.avatar}}" class="avatar" src="{{coach.avatar}}" mode="aspectFill" />
+    <view wx:else class="avatar text-avatar">{{coach.initial}}</view>
     <view>
       <view class="title">{{coach.name}}</view>
-      <view class="subtitle">{{coach.level}} · 擅长 {{coach.skill}}</view>
+      <view class="subtitle">{{coach.level}} · {{coach.resort}}</view>
     </view>
   </view>
   <view class="section card">
     <view class="title">课程信息</view>
-    <view class="subtitle">适合零基础、进阶训练、刻滑和平花专项练习。</view>
+    <view class="summary-row">
+      <view><text class="score">{{coach.rating}}</text><text class="subtitle">评分</text></view>
+      <view><text class="score">{{coach.reviews}}</text><text class="subtitle">评价</text></view>
+      <view><text class="score">{{coach.years}}年</text><text class="subtitle">经验</text></view>
+    </view>
+    <view class="subtitle">{{coach.intro}}</view>
+    <view class="info-line">资质：{{coach.certificate}}</view>
+    <view class="info-line">擅长：{{coach.skill}}</view>
+    <view class="info-line">授课雪场：{{coach.resort}}</view>
     <view class="price">¥{{coach.price}}/课时</view>
+    <button class="ghost-btn favorite-btn {{favorited ? 'active' : ''}}" hover-class="tap-hover" bindtap="toggleFavorite">{{favorited ? '取消收藏' : '收藏教练'}}</button>
     <button class="primary-btn" hover-class="tap-hover" bindtap="book">立即预约</button>
+  </view>
+
+  <view class="section card">
+    <view class="title-row">
+      <view class="title">教练评论</view>
+      <view class="tag">{{comments.length}} 条</view>
+    </view>
+    <view wx:if="{{comments.length === 0}}" class="empty">暂无评论，欢迎分享上课体验。</view>
+    <view class="comment-item" wx:for="{{comments}}" wx:key="id">
+      <view>
+        <view class="comment-author">{{item.author}}</view>
+        <view class="comment-content">{{item.content}}</view>
+        <view class="subtitle">{{item.createdAtText}}</view>
+      </view>
+      <view class="link" data-id="{{item.id}}" bindtap="deleteComment">删除</view>
+    </view>
+    <view class="comment-box">
+      <input class="comment-input" value="{{commentContent}}" bindinput="onCommentInput" placeholder="写下你的评价" />
+      <button class="comment-btn" hover-class="tap-hover" bindtap="submitComment">发送</button>
+    </view>
   </view>
 </view>

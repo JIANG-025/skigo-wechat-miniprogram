@@ -1,3 +1,26 @@
+.category-row {
+  margin-top: 22rpx;
+  white-space: nowrap;
+}
+
+.category {
+  display: inline-flex;
+  align-items: center;
+  height: 58rpx;
+  padding: 0 24rpx;
+  margin-right: 14rpx;
+  border-radius: 999rpx;
+  background: #edf4ff;
+  color: #627089;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.category.active {
+  background: #165dff;
+  color: #ffffff;
+}
+
 .coach-card {
   display: flex;
   gap: 22rpx;
@@ -15,6 +38,11 @@
   justify-content: center;
   font-size: 36rpx;
   font-weight: 900;
+}
+
+.text-avatar {
+  background: #165dff;
+  color: #ffffff;
 }
 
 .coach-main {

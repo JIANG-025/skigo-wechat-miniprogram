@@ -48,9 +48,9 @@ const products = [
 ]
 
 const coaches = [
-  { id: 'coach-1', name: 'Michael Wang', initial: 'M', level: 'PSIA A级', price: 600, skill: '平花 刻滑', avatar: '/images/coach-michael.png' },
-  { id: 'coach-2', name: 'Sarah Li', initial: 'S', level: '加拿大 CASI', price: 550, skill: '零基础启蒙', avatar: '/images/coach-sarah.png' },
-  { id: 'coach-3', name: '张建国', initial: '张', level: '国职高级', price: 500, skill: '单双板全能', avatar: '/images/coach-zhang.png' }
+  { id: 'coach-1', name: 'Michael Wang', initial: 'M', level: 'PSIA A级', category: '专业教练', price: 600, rating: 4.9, reviews: 328, years: 8, resort: '崇礼云顶', skill: '平花 刻滑', certificate: 'PSIA Alpine Level 2', intro: '擅长进阶控速、刻滑和平花动作训练，课程节奏清晰。', avatar: '/images/coach-michael.png' },
+  { id: 'coach-2', name: 'Sarah Li', initial: 'S', level: '加拿大 CASI', category: '国家教练', price: 550, rating: 4.8, reviews: 215, years: 6, resort: '崇礼云顶', skill: '零基础启蒙', certificate: 'CASI Level 1', intro: '适合零基础和儿童入门教学，注重安全、动作规范和信心建立。', avatar: '/images/coach-sarah.png' },
+  { id: 'coach-3', name: '张建国', initial: '张', level: '国职高级', category: '雪场教练', price: 500, rating: 4.9, reviews: 412, years: 10, resort: '长白山万达', skill: '单双板全能', certificate: '国家一级滑雪指导员', intro: '长期驻场授课，熟悉雪道条件，适合家庭和进阶训练。', avatar: '/images/coach-zhang.png' }
 ]
 
 const posts = [

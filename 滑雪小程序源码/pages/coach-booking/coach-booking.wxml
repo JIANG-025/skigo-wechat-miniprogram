@@ -1,0 +1,39 @@
+<view class="page" wx:if="{{coach}}">
+  <view class="card coach-card">
+    <image wx:if="{{coach.avatar}}" class="avatar" src="{{coach.avatar}}" mode="aspectFill" />
+    <view wx:else class="avatar text-avatar">{{coach.initial}}</view>
+    <view>
+      <view class="item-title">{{coach.name}}</view>
+      <view class="subtitle">{{coach.level}} · {{coach.resort}}</view>
+      <view class="price">¥{{coach.price}}/课时</view>
+    </view>
+  </view>
+
+  <view class="section card">
+    <view class="field-title">预约日期</view>
+    <picker mode="date" value="{{date}}" bindchange="chooseDate">
+      <view class="picker-box">{{date}}</view>
+    </picker>
+
+    <view class="field-title">选择时段</view>
+    <view class="slot-row">
+      <view wx:for="{{slots}}" wx:key="*this" data-slot="{{item}}" hover-class="tap-hover" bindtap="chooseSlot" class="slot {{activeSlot === item ? 'active' : ''}}">{{item}}</view>
+    </view>
+
+    <view class="field-title">课时数量</view>
+    <picker range="{{lessonOptions}}" value="{{lessonIndex}}" bindchange="chooseLessons">
+      <view class="picker-box">{{lessons}} 课时</view>
+    </picker>
+
+    <view class="field-title">备注说明</view>
+    <textarea class="textarea" value="{{note}}" bindinput="onNoteInput" placeholder="可填写基础水平、特殊需求等" maxlength="160" />
+  </view>
+
+  <view class="booking-bar">
+    <view>
+      <view class="muted">合计</view>
+      <view class="price total">¥{{total}}</view>
+    </view>
+    <button class="primary-btn submit" hover-class="tap-hover" bindtap="submit">提交预约</button>
+  </view>
+</view>

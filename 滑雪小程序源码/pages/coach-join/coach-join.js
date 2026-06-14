@@ -37,7 +37,7 @@ Page({
     records.unshift({
       ...form,
       id: `coach-join-${Date.now()}`,
-      status: '待审核',
+      status: '已入驻',
       createdAt: Date.now()
     })
     wx.setStorageSync(STORAGE_KEY, records)

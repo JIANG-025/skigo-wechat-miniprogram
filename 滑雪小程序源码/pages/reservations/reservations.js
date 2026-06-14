@@ -2,7 +2,7 @@ const orderStore = require('../../utils/order-store')
 
 Page({
   data: {
-    tabs: ['全部', '待确认', '待使用', '已完成'],
+    tabs: ['全部', '待确认', '已确认', '已完成'],
     activeTab: '全部',
     reservations: [],
     filteredReservations: []

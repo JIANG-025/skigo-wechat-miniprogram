@@ -22,3 +22,10 @@
   line-height: 1.7;
   color: #38445a;
 }
+
+.bottom-row {
+  margin-top: 12rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
