@@ -3,6 +3,7 @@
     <image wx:if="{{coach.avatar}}" class="avatar" src="{{coach.avatar}}" mode="aspectFill" />
     <view wx:else class="avatar text-avatar">{{coach.initial}}</view>
     <view>
+      <view class="tag">{{coach.category}}</view>
       <view class="title">{{coach.name}}</view>
       <view class="subtitle">{{coach.level}} · {{coach.resort}}</view>
     </view>
@@ -14,13 +15,15 @@
       <view><text class="score">{{coach.reviews}}</text><text class="subtitle">评价</text></view>
       <view><text class="score">{{coach.years}}年</text><text class="subtitle">经验</text></view>
     </view>
-    <view class="subtitle">{{coach.intro}}</view>
+    <view class="intro-box">{{coach.intro}}</view>
     <view class="info-line">资质：{{coach.certificate}}</view>
     <view class="info-line">擅长：{{coach.skill}}</view>
     <view class="info-line">授课雪场：{{coach.resort}}</view>
     <view class="price">¥{{coach.price}}/课时</view>
-    <button class="ghost-btn favorite-btn {{favorited ? 'active' : ''}}" hover-class="tap-hover" bindtap="toggleFavorite">{{favorited ? '取消收藏' : '收藏教练'}}</button>
-    <button class="primary-btn" hover-class="tap-hover" bindtap="book">立即预约</button>
+    <view class="button-row">
+      <button class="ghost-btn favorite-btn {{favorited ? 'active' : ''}}" hover-class="tap-hover" bindtap="toggleFavorite">{{favorited ? '取消收藏' : '收藏教练'}}</button>
+      <button class="primary-btn book-btn" hover-class="tap-hover" bindtap="book">立即预约</button>
+    </view>
   </view>
 
   <view class="section card">

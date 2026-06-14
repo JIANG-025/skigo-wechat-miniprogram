@@ -6,6 +6,11 @@
       <view class="tag">{{resort.status}}</view>
       <view class="detail-title">{{resort.name}}</view>
       <view class="hero-subtitle">{{resort.location}} · {{resort.feature}}</view>
+      <view class="hero-stats">
+        <view><text>¥{{resort.price}}</text><text>起订价</text></view>
+        <view><text>{{resort.weather}}</text><text>实时天气</text></view>
+        <view><text>{{resort.snow}}</text><text>当前雪况</text></view>
+      </view>
     </view>
   </view>
 
@@ -19,8 +24,10 @@
     <view class="info-row"><text>雪况</text><text>{{resort.snow}}</text></view>
     <view class="info-row"><text>适合人群</text><text>初级到中高级雪友</text></view>
     <view class="info-row"><text>服务设施</text><text>雪具大厅、储物柜、餐饮、酒店</text></view>
-    <button class="ghost-btn favorite-btn {{favorited ? 'active' : ''}}" hover-class="tap-hover" bindtap="toggleFavorite">{{favorited ? '取消收藏' : '收藏雪场'}}</button>
-    <button class="primary-btn" hover-class="tap-hover" bindtap="bookTicket">立即预订</button>
+    <view class="button-row">
+      <button class="ghost-btn favorite-btn {{favorited ? 'active' : ''}}" hover-class="tap-hover" bindtap="toggleFavorite">{{favorited ? '取消收藏' : '收藏雪场'}}</button>
+      <button class="primary-btn book-btn" hover-class="tap-hover" bindtap="bookTicket">立即预订</button>
+    </view>
   </view>
 
   <view class="section">
@@ -28,7 +35,8 @@
       <view class="title">平台教练</view>
     </view>
     <view class="coach-row card" hover-class="tap-hover" wx:for="{{platformCoaches}}" wx:key="id" data-id="{{item.id}}" bindtap="goCoach">
-      <image class="coach-avatar" src="{{item.avatar}}" mode="aspectFill" />
+      <image wx:if="{{item.avatar}}" class="coach-avatar" src="{{item.avatar}}" mode="aspectFill" />
+      <view wx:else class="coach-avatar text-avatar">{{item.initial}}</view>
       <view>
         <view class="coach-name">{{item.name}} <text class="tag">{{item.level}}</text></view>
         <view class="subtitle">平台认证 · {{item.skill}}</view>
@@ -41,7 +49,8 @@
       <view class="title">雪场教练</view>
     </view>
     <view class="coach-row card" hover-class="tap-hover" wx:for="{{resortCoaches}}" wx:key="id" data-id="{{item.id}}" bindtap="goCoach">
-      <image class="coach-avatar" src="{{item.avatar}}" mode="aspectFill" />
+      <image wx:if="{{item.avatar}}" class="coach-avatar" src="{{item.avatar}}" mode="aspectFill" />
+      <view wx:else class="coach-avatar text-avatar">{{item.initial}}</view>
       <view>
         <view class="coach-name">{{item.name}} <text class="tag">{{item.level}}</text></view>
         <view class="subtitle">驻场服务 · {{item.skill}}</view>

@@ -13,7 +13,15 @@
       <view class="item-title">{{item.name}} <text class="tag">{{item.level}}</text></view>
       <view class="subtitle">{{item.resort}} · {{item.category}}</view>
       <view class="subtitle">擅长：{{item.skill}}</view>
-      <view class="price">¥{{item.price}}/课时</view>
+      <view class="coach-meta">
+        <text>{{item.rating}} 分</text>
+        <text>{{item.reviews}} 评价</text>
+        <text>{{item.years}} 年经验</text>
+      </view>
+      <view class="card-bottom">
+        <view class="price">¥{{item.price}}/课时</view>
+        <view class="book-chip">预约</view>
+      </view>
     </view>
   </view>
 </view>

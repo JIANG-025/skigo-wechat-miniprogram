@@ -15,6 +15,16 @@ Page({
     selectedWeather: weatherStore.normalizeWeather(weatherStore.formatLocalWeather(resorts[0])),
     weatherCache: {},
     weatherLoading: false,
+    navActions: [
+      { icon: '票', label: '雪场订票', url: '/pages/ticket-booking/ticket-booking' },
+      { icon: '宿', label: '酒店预定', url: '/pages/hotels/hotels' },
+      { icon: '租', label: '装备租赁', url: '/pages/rental/rental' },
+      { icon: '购', label: '装备购买', url: '/pages/store/store' },
+      { icon: '教', label: '预约教练', url: '/pages/coaches/coaches' },
+      { icon: '社', label: '滑雪社区', url: '/pages/community/community' },
+      { icon: '保', label: '购买保险', url: '/pages/insurance/insurance' },
+      { icon: '更', label: '更多功能', url: '/pages/more/more' }
+    ],
     resorts,
     products,
     coaches,

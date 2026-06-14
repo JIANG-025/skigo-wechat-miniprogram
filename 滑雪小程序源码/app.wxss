@@ -1,6 +1,6 @@
 page {
   min-height: 100vh;
-  background: #f6f8fb;
+  background: linear-gradient(180deg, #f3f8ff 0%, #f7f9fc 42%, #f6f8fb 100%);
   color: #172033;
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -19,7 +19,7 @@ page {
   background: #ffffff;
   border-radius: 24rpx;
   padding: 28rpx;
-  box-shadow: 0 10rpx 30rpx rgba(42, 61, 102, 0.08);
+  box-shadow: 0 12rpx 34rpx rgba(42, 61, 102, 0.07);
   box-sizing: border-box;
   transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
 }
@@ -58,7 +58,7 @@ page {
   font-weight: 700;
   text-align: center;
   transition: transform 160ms ease, opacity 160ms ease, box-shadow 160ms ease;
-  box-shadow: 0 10rpx 22rpx rgba(22, 93, 255, 0.18);
+  box-shadow: 0 12rpx 26rpx rgba(22, 93, 255, 0.2);
 }
 
 .ghost-btn {
@@ -100,8 +100,8 @@ page {
 }
 
 .tap-hover {
-  transform: scale(0.97);
-  opacity: 0.86;
+  transform: translateY(2rpx) scale(0.98);
+  opacity: 0.9;
   transition: all 120ms ease;
 }
 

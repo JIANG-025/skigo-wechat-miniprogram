@@ -2,6 +2,7 @@
   <view class="card profile-card">
     <view class="avatar">{{profile.initial}}</view>
     <view class="profile-main">
+      <view class="profile-badge">SkiGo 会员</view>
       <view class="title">{{profile.nickname}}</view>
       <view class="subtitle">{{profile.level}}</view>
     </view>
@@ -28,7 +29,8 @@
 
   <view class="section card menu-grid">
     <view class="menu-item" hover-class="tap-hover" wx:for="{{menus}}" wx:key="label" data-url="{{item.url}}" bindtap="goPage">
-      {{item.label}}
+      <view class="menu-icon">{{item.icon}}</view>
+      <view>{{item.label}}</view>
     </view>
   </view>
 

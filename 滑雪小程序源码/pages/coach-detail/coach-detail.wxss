@@ -2,6 +2,9 @@
   display: flex;
   align-items: center;
   gap: 24rpx;
+  background: linear-gradient(135deg, #165dff 0%, #43b8ff 100%);
+  color: #ffffff;
+  box-shadow: 0 18rpx 42rpx rgba(22, 93, 255, 0.2);
 }
 
 .avatar {
@@ -18,8 +21,16 @@
 }
 
 .text-avatar {
-  background: #165dff;
+  background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
+}
+
+.coach-head .subtitle {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.coach-head .tag {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .summary-row {
@@ -37,6 +48,21 @@
   font-weight: 900;
 }
 
+.summary-row > view {
+  border-radius: 22rpx;
+  background: #f5f8ff;
+  padding: 18rpx 8rpx;
+}
+
+.intro-box {
+  padding: 22rpx;
+  border-radius: 20rpx;
+  background: #f7faff;
+  color: #38445a;
+  font-size: 26rpx;
+  line-height: 1.7;
+}
+
 .info-line {
   padding: 18rpx 0;
   border-bottom: 1rpx solid #edf1f7;
@@ -44,12 +70,16 @@
   font-size: 26rpx;
 }
 
-.primary-btn {
+.button-row {
   margin-top: 28rpx;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 16rpx;
 }
 
-.favorite-btn {
-  margin-top: 28rpx;
+.favorite-btn,
+.book-btn {
+  margin: 0;
 }
 
 .favorite-btn.active {

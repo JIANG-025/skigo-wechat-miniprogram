@@ -15,17 +15,17 @@ Page({
       { label: '累计雪时', value: 896 }
     ],
     menus: [
-      { label: '我的预约', url: '/pages/reservations/reservations' },
-      { label: '我的订单', url: '/pages/orders/orders' },
-      { label: '我的收藏', url: '/pages/favorites/favorites' },
-      { label: '我的评论', url: '/pages/my-comments/my-comments' },
-      { label: '教练入驻', url: '/pages/coach-join/coach-join' },
-      { label: '滑雪相册', url: '/pages/album/album' },
-      { label: '滑雪日记', url: '/pages/diary/diary' },
-      { label: '等级认证', url: '/pages/certification/certification' },
-      { label: '客服中心', url: '/pages/support/support' },
-      { label: '帮助中心', url: '/pages/help/help' },
-      { label: '设置', url: '/pages/settings/settings' }
+      { icon: '约', label: '我的预约', url: '/pages/reservations/reservations' },
+      { icon: '单', label: '我的订单', url: '/pages/orders/orders' },
+      { icon: '藏', label: '我的收藏', url: '/pages/favorites/favorites' },
+      { icon: '评', label: '我的评论', url: '/pages/my-comments/my-comments' },
+      { icon: '入', label: '教练入驻', url: '/pages/coach-join/coach-join' },
+      { icon: '册', label: '滑雪相册', url: '/pages/album/album' },
+      { icon: '记', label: '滑雪日记', url: '/pages/diary/diary' },
+      { icon: '级', label: '等级认证', url: '/pages/certification/certification' },
+      { icon: '服', label: '客服中心', url: '/pages/support/support' },
+      { icon: '助', label: '帮助中心', url: '/pages/help/help' },
+      { icon: '设', label: '设置', url: '/pages/settings/settings' }
     ]
   },
   onShow() {

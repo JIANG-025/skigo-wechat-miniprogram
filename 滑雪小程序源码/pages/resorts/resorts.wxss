@@ -1,3 +1,45 @@
+.search-bar {
+  margin-top: 24rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  border-radius: 24rpx;
+  background: #ffffff;
+  color: #7a8496;
+  padding: 0 28rpx;
+  box-shadow: 0 8rpx 24rpx rgba(42, 61, 102, 0.06);
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16rpx;
+}
+
+.stat-pill {
+  min-height: 116rpx;
+  border-radius: 24rpx;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(42, 61, 102, 0.06);
+}
+
+.stat-value {
+  color: #165dff;
+  font-size: 34rpx;
+  font-weight: 900;
+}
+
+.stat-label {
+  margin-top: 6rpx;
+  color: #6b768a;
+  font-size: 22rpx;
+}
+
 .resort-list-card {
   padding: 0;
   overflow: hidden;
@@ -37,6 +79,19 @@
   z-index: 1;
 }
 
+.cover-tag {
+  position: absolute;
+  top: 26rpx;
+  right: 26rpx;
+  z-index: 1;
+  padding: 8rpx 18rpx;
+  border-radius: 999rpx;
+  background: rgba(255, 255, 255, 0.9);
+  color: #165dff;
+  font-size: 22rpx;
+  font-weight: 900;
+}
+
 .resort-body {
   padding: 26rpx;
 }
@@ -48,8 +103,17 @@
 
 .meta-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 24rpx;
   margin: 18rpx 0;
   color: #6b768a;
   font-size: 24rpx;
+}
+
+.meta-chip {
+  padding: 10rpx 18rpx;
+  border-radius: 999rpx;
+  background: #f0f6ff;
+  color: #51617a;
+  font-weight: 700;
 }
