@@ -6,6 +6,14 @@
 
 .item {
   min-height: 190rpx;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 100%);
+}
+
+.item-icon {
+  width: 58rpx;
+  height: 58rpx;
+  border-radius: 18rpx;
+  margin-bottom: 16rpx;
 }
 
 .item-title {

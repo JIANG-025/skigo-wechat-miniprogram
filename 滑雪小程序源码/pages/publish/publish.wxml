@@ -4,6 +4,7 @@
 
   <view class="section action-grid">
     <view class="card action-card" wx:for="{{quickActions}}" wx:key="title" data-url="{{item.url}}" data-tab="{{item.tab}}" hover-class="tap-hover" bindtap="goAction">
+      <image class="action-icon" src="{{item.icon}}" mode="aspectFill" />
       <view class="action-title">{{item.title}}</view>
       <view class="subtitle">{{item.desc}}</view>
     </view>
@@ -13,7 +14,7 @@
     <view class="title">发布动态</view>
   </view>
 
-  <view class="section card">
+  <view class="section card publish-card">
     <view class="label">所在雪场</view>
     <view class="select-box">{{selectedResort}}</view>
     <view class="label">动态内容</view>

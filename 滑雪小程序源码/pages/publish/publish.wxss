@@ -6,12 +6,24 @@
 
 .action-card {
   min-height: 170rpx;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%);
+}
+
+.action-icon {
+  width: 58rpx;
+  height: 58rpx;
+  border-radius: 18rpx;
+  margin-bottom: 14rpx;
 }
 
 .action-title {
   font-size: 30rpx;
   font-weight: 900;
   color: #172033;
+}
+
+.publish-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
 }
 
 .label {
@@ -26,6 +38,7 @@
   padding: 0 24rpx;
   border-radius: 18rpx;
   background: #f2f6fd;
+  border: 1rpx solid #e6eefb;
   color: #172033;
 }
 
@@ -36,6 +49,7 @@
   box-sizing: border-box;
   border-radius: 20rpx;
   background: #f2f6fd;
+  border: 1rpx solid #e6eefb;
   font-size: 26rpx;
 }
 

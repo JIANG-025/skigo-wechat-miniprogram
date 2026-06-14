@@ -1,7 +1,8 @@
 <view class="page" wx:if="{{coach}}">
-  <view class="card coach-card">
+  <view class="booking-hero">
     <image class="avatar" src="{{coach.avatar}}" mode="aspectFill" />
     <view>
+      <view class="mini-tag">{{coach.category}}</view>
       <view class="item-title">{{coach.name}}</view>
       <view class="subtitle">{{coach.level}} · {{coach.resort}}</view>
       <view class="price">¥{{coach.price}}/课时</view>
@@ -9,6 +10,7 @@
   </view>
 
   <view class="section card">
+    <view class="form-title">预约信息</view>
     <view class="field-title">预约日期</view>
     <picker mode="date" value="{{date}}" bindchange="chooseDate">
       <view class="picker-box">{{date}}</view>

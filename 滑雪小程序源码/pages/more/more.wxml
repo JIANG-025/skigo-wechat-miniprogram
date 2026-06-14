@@ -4,6 +4,7 @@
 
   <view class="section grid">
     <view class="card item" hover-class="tap-hover" wx:for="{{items}}" wx:key="title" data-url="{{item.url}}" bindtap="goPage">
+      <image class="item-icon" src="{{item.icon}}" mode="aspectFill" />
       <view class="item-title">{{item.title}}</view>
       <view class="subtitle">{{item.desc}}</view>
     </view>

@@ -1,8 +1,15 @@
 <view class="page">
-  <view class="title">教练入驻</view>
-  <view class="subtitle">填写授课资料后，可用于展示教练服务信息。</view>
+  <view class="join-hero">
+    <view>
+      <view class="hero-label">COACH</view>
+      <view class="title">教练入驻</view>
+      <view class="subtitle">填写授课资料后，可用于展示教练服务信息。</view>
+    </view>
+    <image class="hero-icon" src="/images/icon-join.png" mode="aspectFill" />
+  </view>
 
   <view class="section card form-card">
+    <view class="notice">资料提交后会生成教练信息卡，可在教练列表与对应雪场中查看。</view>
     <view class="field-label">姓名</view>
     <input class="form-input" data-field="name" value="{{form.name}}" bindinput="onInput" placeholder="请输入姓名" />
 

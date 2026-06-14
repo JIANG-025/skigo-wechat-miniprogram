@@ -1,3 +1,30 @@
+.page-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  border-radius: 30rpx;
+  background: linear-gradient(135deg, #ffffff 0%, #eef6ff 100%);
+  box-shadow: 0 12rpx 34rpx rgba(42, 61, 102, 0.07);
+}
+
+.hero-label {
+  color: #165dff;
+  font-size: 21rpx;
+  font-weight: 900;
+}
+
+.hero-icon,
+.empty-icon,
+.card-icon {
+  border-radius: 18rpx;
+}
+
+.hero-icon {
+  width: 76rpx;
+  height: 76rpx;
+}
+
 .tab-row {
   display: flex;
   gap: 14rpx;
@@ -20,6 +47,13 @@
 
 .empty-card {
   text-align: center;
+  padding: 48rpx 28rpx;
+}
+
+.empty-icon {
+  width: 88rpx;
+  height: 88rpx;
+  margin-bottom: 18rpx;
 }
 
 .empty-title,
@@ -34,12 +68,18 @@
 
 .reservation-card {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 24rpx;
   margin-bottom: 18rpx;
 }
 
+.card-icon {
+  width: 70rpx;
+  height: 70rpx;
+  flex: 0 0 auto;
+}
+
 .right {
+  margin-left: auto;
   text-align: right;
 }
