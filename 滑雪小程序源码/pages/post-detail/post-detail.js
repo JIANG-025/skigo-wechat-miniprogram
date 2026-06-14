@@ -1,5 +1,6 @@
 const postStore = require('../../utils/post-store')
 const favoriteStore = require('../../utils/favorite-store')
+const commentStore = require('../../utils/comment-store')
 
 Page({
   data: {
@@ -38,6 +39,12 @@ Page({
       return
     }
     const post = await postStore.addComment(this.data.id, content)
+    commentStore.addComment({
+      targetId: this.data.id,
+      targetTitle: post.content.slice(0, 16),
+      type: '社区',
+      content
+    })
     this.setData({
       post,
       commentContent: ''

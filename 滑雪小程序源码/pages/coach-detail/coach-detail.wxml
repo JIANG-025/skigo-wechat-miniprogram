@@ -16,8 +16,20 @@
       <view><text class="score">{{coach.years}}年</text><text class="subtitle">经验</text></view>
     </view>
     <view class="intro-box">{{coach.intro}}</view>
-    <view class="info-line">资质：{{coach.certificate}}</view>
-    <view class="info-line">擅长：{{coach.skill}}</view>
+    <view class="detail-block">
+      <view class="block-title">专业资质</view>
+      <view class="pill-list">
+        <text wx:for="{{coach.certificates}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+    <view class="detail-block">
+      <view class="block-title">擅长领域</view>
+      <view class="pill-list">
+        <text wx:for="{{coach.teachTags}}" wx:key="*this">{{item}}</text>
+      </view>
+    </view>
+    <view class="info-line">适合人群：{{coach.suitable}}</view>
+    <view class="info-line">训练安排：{{coach.plan}}</view>
     <view class="info-line">授课雪场：{{coach.resort}}</view>
     <view class="price">¥{{coach.price}}/课时</view>
     <view class="button-row">

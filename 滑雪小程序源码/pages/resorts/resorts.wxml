@@ -25,8 +25,15 @@
       </view>
       <view class="subtitle">{{item.location}} · {{item.feature}}</view>
       <view class="meta-row">
+        <view class="meta-chip">★ {{item.rating}}</view>
+        <view class="meta-chip">{{item.trails}} 条雪道</view>
+        <view class="meta-chip">{{item.lifts}} 条缆车</view>
         <view class="meta-chip">{{item.weather}}</view>
         <view class="meta-chip">{{item.snow}}</view>
+      </view>
+      <view class="open-row">
+        <text>开放时间 {{item.openTime}}</text>
+        <text>{{item.difficulty}}</text>
       </view>
     </view>
   </view>

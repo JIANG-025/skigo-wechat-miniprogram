@@ -104,7 +104,7 @@
 .meta-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 24rpx;
+  gap: 12rpx;
   margin: 18rpx 0;
   color: #6b768a;
   font-size: 24rpx;
@@ -116,4 +116,16 @@
   background: #f0f6ff;
   color: #51617a;
   font-weight: 700;
+  font-size: 22rpx;
+}
+
+.open-row {
+  padding-top: 14rpx;
+  border-top: 1rpx solid #edf1f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18rpx;
+  color: #7a8496;
+  font-size: 23rpx;
 }

@@ -5,6 +5,7 @@
   <scroll-view scroll-x class="category-row">
     <view wx:for="{{categories}}" wx:key="*this" data-category="{{item}}" bindtap="chooseCategory" hover-class="tap-hover" class="category {{activeCategory === item ? 'active' : ''}}">{{item}}</view>
   </scroll-view>
+  <view class="list-summary">共 {{filteredCoaches.length}} 位{{activeCategory === '全部' ? '认证教练' : activeCategory}}</view>
 
   <view class="section card coach-card" hover-class="tap-hover" wx:for="{{filteredCoaches}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
     <image wx:if="{{item.avatar}}" class="avatar" src="{{item.avatar}}" mode="aspectFill" />
@@ -12,7 +13,9 @@
     <view class="coach-main">
       <view class="item-title">{{item.name}} <text class="tag">{{item.level}}</text></view>
       <view class="subtitle">{{item.resort}} · {{item.category}}</view>
-      <view class="subtitle">擅长：{{item.skill}}</view>
+      <view class="tag-list">
+        <text wx:for="{{item.teachTags}}" wx:key="*this">{{item}}</text>
+      </view>
       <view class="coach-meta">
         <text>{{item.rating}} 分</text>
         <text>{{item.reviews}} 评价</text>

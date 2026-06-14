@@ -68,6 +68,34 @@
   border-bottom: 1rpx solid #edf1f7;
   color: #38445a;
   font-size: 26rpx;
+  line-height: 1.6;
+}
+
+.detail-block {
+  padding: 22rpx 0;
+  border-bottom: 1rpx solid #edf1f7;
+}
+
+.block-title {
+  color: #172033;
+  font-size: 26rpx;
+  font-weight: 900;
+}
+
+.pill-list {
+  margin-top: 14rpx;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.pill-list text {
+  padding: 8rpx 16rpx;
+  border-radius: 999rpx;
+  background: #eef5ff;
+  color: #165dff;
+  font-size: 23rpx;
+  font-weight: 800;
 }
 
 .button-row {

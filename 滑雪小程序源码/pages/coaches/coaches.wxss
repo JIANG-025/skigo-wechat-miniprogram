@@ -21,6 +21,12 @@
   color: #ffffff;
 }
 
+.list-summary {
+  margin-top: 18rpx;
+  color: #7a8496;
+  font-size: 24rpx;
+}
+
 .coach-card {
   display: flex;
   gap: 22rpx;
@@ -52,6 +58,22 @@
 
 .item-title {
   font-size: 28rpx;
+  font-weight: 800;
+}
+
+.tag-list {
+  margin-top: 12rpx;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rpx;
+}
+
+.tag-list text {
+  padding: 6rpx 12rpx;
+  border-radius: 999rpx;
+  background: #eef5ff;
+  color: #165dff;
+  font-size: 21rpx;
   font-weight: 800;
 }
 

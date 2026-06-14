@@ -17,8 +17,12 @@ function getJoinedCoaches() {
     years: Number(record.years || 0),
     resort: record.resort,
     skill: record.skill,
+    teachTags: String(record.skill || '').split(/[、,，\s]+/).filter(Boolean).slice(0, 4),
+    certificates: [record.certificate || record.level].filter(Boolean),
     certificate: record.certificate || record.level,
     intro: record.intro || '专注滑雪基础训练和雪场课程服务。',
+    suitable: '入门体验、技术纠错、雪场陪滑',
+    plan: '根据学员基础安排安全讲解、动作纠错和路线训练。',
     avatar: ''
   }))
 }
