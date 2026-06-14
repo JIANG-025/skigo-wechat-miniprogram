@@ -16,7 +16,7 @@ cloud1-d6geemhftac318bc0
 | `postService` | 社区动态列表、详情、发布、点赞、评论、删除、重置 |
 | `orderService` | 订单列表、创建订单、重置 |
 | `favoriteService` | 收藏列表、收藏状态检测、收藏/取消收藏、重置 |
-| `weatherService` | 通过 Open-Meteo 获取雪场实时天气，前端不直接请求第三方接口 |
+| `weatherService` | 历史保留的天气云函数；当前前端已改为直接请求 Open-Meteo，不再要求部署 |
 
 使用方式：
 

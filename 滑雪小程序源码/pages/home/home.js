@@ -36,6 +36,9 @@ Page({
     coaches,
     posts
   },
+  onLoad() {
+    this.loadWeather(resorts[0])
+  },
   onShow() {
     setTabBarSelected(this, 0)
   },
