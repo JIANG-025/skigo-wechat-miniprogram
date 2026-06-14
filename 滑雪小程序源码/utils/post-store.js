@@ -1,6 +1,6 @@
 const { posts: defaultPosts } = require('./mock-data')
 
-const STORAGE_KEY = 'skigo_demo_posts'
+const STORAGE_KEY = 'skigo_local_posts'
 const CLOUD_FUNCTION = 'postService'
 
 function clone(value) {

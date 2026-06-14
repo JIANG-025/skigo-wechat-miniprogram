@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'skigo_demo_orders'
+const STORAGE_KEY = 'skigo_local_orders'
 const CLOUD_FUNCTION = 'orderService'
 
 const defaultOrders = [

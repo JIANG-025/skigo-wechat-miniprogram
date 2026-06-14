@@ -8,9 +8,9 @@ const db = cloud.database()
 const collection = db.collection('favorites')
 
 const defaultFavorites = [
-  { id: 'fav-1', targetId: 'resort-demo', type: '雪场', title: '阿尔卑斯雪场', desc: '瑞士 · 高级雪道', createdAt: Date.now() - 300000 },
-  { id: 'fav-2', targetId: 'product-demo', type: '装备', title: '专业滑雪套装', desc: '顶级品牌 · 全地形适用', createdAt: Date.now() - 600000 },
-  { id: 'fav-3', targetId: 'post-demo', type: '帖子', title: '长白山滑雪攻略', desc: '收藏的社区攻略', createdAt: Date.now() - 900000 }
+  { id: 'fav-1', targetId: 'resort-2', type: '雪场', title: '崇礼云顶', desc: '河北张家口 · 雪况优', createdAt: Date.now() - 300000 },
+  { id: 'fav-2', targetId: 'product-1', type: '装备', title: '全能竞技滑雪板', desc: '装备商城 · 热销', createdAt: Date.now() - 600000 },
+  { id: 'fav-3', targetId: 'post-1', type: '帖子', title: '崇礼云顶滑雪体验', desc: '收藏的社区攻略', createdAt: Date.now() - 900000 }
 ]
 
 let collectionChecked = false

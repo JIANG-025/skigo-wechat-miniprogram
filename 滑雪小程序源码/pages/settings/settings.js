@@ -6,7 +6,7 @@ Page({
   data: {
     items: ['个人资料', '滑雪保险', '客服中心', '帮助中心', '隐私设置', '关于 SkiGo']
   },
-  resetDemoData() {
+  resetSampleData() {
     wx.showModal({
       title: '重置默认数据',
       content: '将恢复默认帖子、订单和收藏数据，是否继续？',

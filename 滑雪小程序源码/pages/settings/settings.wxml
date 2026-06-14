@@ -11,7 +11,7 @@
       <view class="item-title">数据恢复</view>
       <view class="subtitle">恢复默认帖子、订单和收藏数据。</view>
     </view>
-    <button class="reset-btn" hover-class="tap-hover" bindtap="resetDemoData">重置</button>
+    <button class="reset-btn" hover-class="tap-hover" bindtap="resetSampleData">重置</button>
   </view>
 
   <view class="section card reset-card">
